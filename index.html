@@ -19,10 +19,10 @@
     <a class="donate-btn" href="https://www.saintssleddogrescue.co.uk/donate" target="_blank">Support Our Work</a>
   </main>
 
-  <!-- Carousel section -->
+  <!-- Carousel Section -->
   <section class="carousel-container">
     <div class="carousel">
-      <img class="carousel-image active" src="https://pet-health-content-media.chewy.com/wp-content/uploads/2024/09/11161625/202106husky-dog-breed-626230238-scaled-1.jpg" alt="Rescue Dog 1">
+      <img class="carousel-image" src="https://pet-health-content-media.chewy.com/wp-content/uploads/2024/09/11161625/202106husky-dog-breed-626230238-scaled-1.jpg" alt="Rescue Dog 1">
       <img class="carousel-image" src="https://www.akc.org/wp-content/uploads/2017/11/Siberian-Husky-standing-outdoors-in-the-winter.jpg" alt="Rescue Dog 2">
       <img class="carousel-image" src="https://cdn.wamiz.fr/cdn-cgi/image/format=auto,quality=80,width=532,height=532,fit=cover/animal/breed/dog/adult/668c0c22a4bcf765839764.jpg" alt="Rescue Dog 3">
       <img class="carousel-image" src="https://www.barkbusters.co.uk/files/dog-breed/husky/husky-wolf.webp" alt="Rescue Dog 4">
@@ -40,20 +40,21 @@
   <!-- Load footer -->
   <div id="footer"></div>
 
-  <!-- Inject header and footer from external files -->
+  <!-- Load header and footer, then run carousel logic -->
   <script>
-    fetch('header.html')
-      .then(res => res.text())
-      .then(html => document.getElementById('header').innerHTML = html);
-
-    fetch('footer.html')
-      .then(res => res.text())
-      .then(html => document.getElementById('footer').innerHTML = html);
-  </script>
-
-  <!-- Carousel Script -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
+    Promise.all([
+      fetch('header.html')
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById('header').innerHTML = html;
+        }),
+      fetch('footer.html')
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById('footer').innerHTML = html;
+        })
+    ]).then(() => {
+      // Carousel script
       const slides = document.querySelectorAll('.carousel-image');
       let currentSlide = 0;
 
