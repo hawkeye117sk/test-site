@@ -1,25 +1,35 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>My Dummy Test Site</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      margin: 40px;
-      background-color: #f4f4f4;
-    }
-    .box {
-      padding: 20px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-  </style>
-</head>
-<body>
-  <div class="box">
-    <h1>Welcome to My Test Site</h1>
-    <p>This is a simple HTML test page to showcase layout, styling, and structure.</p>
-  </div>
-</body>
-</html>
+<style>
+.asm3-adoptable-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.asm3-adoptable-item {
+  max-width: 250px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+.asm3-adoptable-thumbnail {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+}
+.asm3-adoptable-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 8px;
+}
+</style>
+
+<script>
+asm3_adoptable_iframe = true;
+function asm3_adoptable_filter(a) {
+  return a.DISPLAYLOCATIONNAME && a.DISPLAYLOCATIONNAME.toLowerCase().includes("foster");
+}
+</script>
+
+<div id="asm3-adoptables"></div>
+<script src="https://eur01d.sheltermanager.com/service?method=animal_view_adoptable_js&account=ss0796"></script>
+
