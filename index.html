@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Saints Sled Dog Rescue</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Saints Sled Dog Rescue – Foster Dogs</title>
+
   <style>
-    body { margin: 0; font-family: 'Arial', sans-serif; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f3f3;
+    }
 
     /* Top contact bar */
     .top-bar {
@@ -89,56 +94,12 @@
       color: #790b82;
       text-decoration: underline;
     }
-  </style>
-</head>
-<body>
 
-  <div class="top-bar">
-    Email: info@saintssleddogrescue.co.uk &nbsp;&nbsp; Phone: 07983 548370
-  </div>
-
-  <header class="main-header">
-    <div class="header-left">
-      <img src="https://static.wixstatic.com/media/8acf8c_82f7fc996c5540a4ab3406374ef17a19~mv2.png/v1/crop/x_123,y_179,w_705,h_590/fill/w_518,h_434,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/50806964_1505930599538852_69290171675097.png" alt="SSDR Logo">
-      <div class="header-title">
-        <h1>Saints Sled Dog Rescue</h1>
-        <p>Charity in England & Scotland</p>
-        <p>No. 1179637 & SCO44070</p>
-      </div>
-    </div>
-    <a class="donate-btn" href="https://www.saintssleddogrescue.co.uk/donate" target="_blank">DONATE</a>
-  </header>
-
-  <nav class="navbar">
-    <a href="https://www.saintssleddogrescue.co.uk/">Home</a>
-    <a href="https://www.saintssleddogrescue.co.uk/meetourdogs">Meet Our Dogs</a>
-    <a href="https://www.saintssleddogrescue.co.uk/fostering">Foster a Dog</a>
-    <a href="https://www.saintssleddogrescue.co.uk/relinquish">Rehome a Dog</a>
-    <a href="https://www.saintssleddogrescue.co.uk/contact-ssdr">Contact SSDR</a>
-    <a href="https://www.saintssleddogrescue.co.uk/events">Events</a>
-    <a href="https://www.saintssleddogrescue.co.uk/shop">SSDR Shop</a>
-  </nav>
-
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Adoptable Foster Dogs</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 40px;
-      background: #f3f3f3;
-    }
-
+    /* Foster dog listings */
     h1 {
       text-align: center;
-      margin-bottom: 40px;
+      margin-top: 40px;
+      color: #790b82;
     }
 
     .asm3-adoptable-list {
@@ -146,6 +107,7 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 30px;
+      padding: 0 20px 40px;
     }
 
     .asm3-adoptable-item {
@@ -186,8 +148,6 @@
     asm3_adoptable_iframe = true;
     asm3_adoptable_sort = "-DAYSONSHELTER"; // Longest stay first
     asm3_adoptable_filters = "sex breed agegroup size species";
-
-    // Filter for dogs in a location that includes 'foster'
     function asm3_adoptable_filter(a) {
       return a.SPECIESNAME === "Dog" &&
         a.DISPLAYLOCATIONNAME &&
@@ -197,8 +157,163 @@
 </head>
 
 <body>
+
+  <div class="top-bar">
+    Email: info@saintssleddogrescue.co.uk &nbsp;&nbsp; Phone: 07983 548370
+  </div>
+
+  <header class="main-header">
+    <div class="header-left">
+      <img src="https://static.wixstatic.com/media/8acf8c_82f7fc996c5540a4ab3406374ef17a19~mv2.png/v1/crop/x_123,y_179,w_705,h_590/fill/w_518,h_434,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/50806964_1505930599538852_69290171675097.png" alt="SSDR Logo">
+      <div class="header-title">
+        <h1>Saints Sled Dog Rescue</h1>
+        <p>Charity in England & Scotland</p>
+        <p>No. 1179637 & SCO44070</p>
+      </div>
+    </div>
+    <a class="donate-btn" href="https://www.saintssleddogrescue.co.uk/donate" target="_blank">DONATE</a>
+  </header>
+
+  <nav class="navbar">
+    <a href="https://www.saintssleddogrescue.co.uk/">Home</a>
+    <a href="https://www.saintssleddogrescue.co.uk/meetourdogs">Meet Our Dogs</a>
+    <a href="https://www.saintssleddogrescue.co.uk/fostering">Foster a Dog</a>
+    <a href="https://www.saintssleddogrescue.co.uk/relinquish">Rehome a Dog</a>
+    <a href="https://www.saintssleddogrescue.co.uk/contact-ssdr">Contact SSDR</a>
+    <a href="https://www.saintssleddogrescue.co.uk/events">Events</a>
+    <a href="https://www.saintssleddogrescue.co.uk/shop">SSDR Shop</a>
+  </nav>
+
   <h1>Meet Our Foster Dogs</h1>
   <div id="asm3-adoptables"></div>
   <script src="https://eur01d.sheltermanager.com/service?method=animal_view_adoptable_js&account=ss0796"></script>
+
 </body>
 </html>
+<footer class="ssdr-footer">
+  <div class="footer-content">
+    <div class="footer-column">
+      <h3>CONNECT <span>with us</span></h3>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">YouTube</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>OTHER <span>information</span></h3>
+      <ul>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Adopt</a></li>
+        <li><a href="#">Re-home</a></li>
+        <li><a href="#">Breed Information</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>HELP <span>support us</span></h3>
+      <ul>
+        <li><a href="#">Donate</a></li>
+        <li><a href="#">Gift Aid</a></li>
+        <li><a href="#">Sponsor a Dog</a></li>
+        <li><a href="#">Volunteer</a></li>
+        <li><a href="#">Friends Of SSDR</a></li>
+      </ul>
+    </div>
+    <div class="footer-dog">
+      <img src="https://static.wixstatic.com/media/8acf8c_f9ea2d7d87e545d8a0b7e43a228fda36~mv2.png" alt="SSDR Dog" height="150">
+    </div>
+  </div>
+
+  <div class="footer-logos">
+    <img src="https://adch.org.uk/wp-content/uploads/2022/03/ADCH-Logo-White.png" alt="ADCH Logo" height="40">
+    <img src="https://register-of-charities.charitycommission.gov.uk/Media/Images/Fundraising_Regulator_Small.png" alt="Fundraising Regulator" height="40">
+  </div>
+
+  <p class="footer-copy">© 2013–2023 by Saints Sled Dog Rescue proudly powered by sled dog pulling power</p>
+  <p class="footer-top"><a href="#">TOP</a></p>
+</footer>
+
+<style>
+.ssdr-footer {
+  background-color: #790b82;
+  color: white;
+  padding: 40px 20px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+.footer-column {
+  text-align: left;
+  min-width: 150px;
+}
+
+.footer-column h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.footer-column h3 span {
+  font-weight: normal;
+  text-transform: none;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin: 6px 0;
+}
+
+.footer-column ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-dog {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logos {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.footer-top a {
+  display: inline-block;
+  margin-top: 10px;
+  color: white;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.footer-top a:hover {
+  text-decoration: underline;
+}
+</style>
