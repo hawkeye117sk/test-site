@@ -97,23 +97,27 @@
 <!-- FOOTER END -->
 
 <script>
-  const slides = document.querySelectorAll('.carousel-image');
-  let current = 0;
+  window.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelectorAll('.carousel-image');
+    let current = 0;
 
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.remove('active');
-      if (i === index) slide.classList.add('active');
-    });
-  }
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) slide.classList.add('active');
+      });
+    }
 
-  function nextSlide() {
-    current = (current + 1) % slides.length;
-    showSlide(current);
-  }
+    function nextSlide() {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }
 
-  setInterval(nextSlide, 4000);
+    showSlide(current); // show the first slide immediately
+    setInterval(nextSlide, 4000);
+  });
 </script>
+
 
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v23.0"></script>
