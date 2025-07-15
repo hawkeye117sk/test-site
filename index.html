@@ -1,41 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Saints Sled Dog Rescue</title>
-
-  <link rel="stylesheet" href="styles.css" />
-  <script>
-    // Load header and footer from external HTML files
-    function loadHTML(id, url) {
-      fetch(url)
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById(id).innerHTML = data;
-        })
-        .catch(err => console.error('Error loading', url, err));
-    }
-
-    window.onload = () => {
-      loadHTML("header-placeholder", "header.html");
-      loadHTML("footer-placeholder", "footer.html");
-    };
-  </script>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <!-- Header from external file -->
-  <div id="header-placeholder"></div>
 
-  <main style="padding: 40px; text-align: center;">
-    <h2>Welcome to Saints Sled Dog Rescue</h2>
-    <p>We are dedicated to the rescue, rehabilitation, and rehoming of sled dog breeds across the UK.</p>
-    <p>Explore our available dogs, learn how you can foster, or get involved with upcoming events.</p>
-    <a class="donate-btn" href="https://www.saintssleddogrescue.co.uk/donate" target="_blank">Support Our Work</a>
+  <!-- HEADER START -->
+  <div class="top-bar">
+    Email: info@saintssleddogrescue.co.uk &nbsp;&nbsp; Phone: 07983 548370
+  </div>
+
+  <header class="main-header">
+    <div class="header-left">
+      <img src="assets/images/SSDR%20Logo.png" alt="SSDR Logo">
+      <div class="header-title">
+        <h1>Saints Sled Dog Rescue</h1>
+        <p>Charity in England & Scotland<br>No. 1179637 & SCO44070</p>
+      </div>
+    </div>
+    <a href="donate.html" class="donate-btn">DONATE</a>
+  </header>
+
+  <nav class="navbar">
+    <a href="index.html" class="active">Home</a>
+    <a href="meetourdogs.html">Meet Our Dogs</a>
+    <a href="fostering.html">Foster a Dog</a>
+    <a href="rehome.html">Rehome a Dog</a>
+    <a href="contact.html">Contact SSDR</a>
+    <a href="events.html">Events</a>
+    <a href="shop.html">SSDR Shop</a>
+  </nav>
+  <!-- HEADER END -->
+
+  <main>
+    <h2 style="text-align:center">Welcome to Saints Sled Dog Rescue</h2>
+    <p style="text-align:center">We are dedicated to the rescue, rehabilitation, and rehoming of sled dog breeds across the UK.</p>
+    <p style="text-align:center">Explore our available dogs, learn how you can foster, or get involved with upcoming events.</p>
+    <div style="text-align:center">
+      <a class="donate-btn" href="https://www.saintssleddogrescue.co.uk/donate" target="_blank">Support Our Work</a>
+    </div>
   </main>
 
-  <!-- Carousel -->
   <section class="carousel-container">
     <div class="carousel">
       <img class="carousel-image active" src="https://pet-health-content-media.chewy.com/wp-content/uploads/2024/09/11161625/202106husky-dog-breed-626230238-scaled-1.jpg" alt="Rescue Dog 1">
@@ -45,87 +53,64 @@
 
       <div class="carousel-textbox">
         <h2><span style="color:#790b82">HELLO</span> <strong>FRIENDS!</strong></h2>
-        <p>We are Saints Sled Dog Rescue, a non-profit charity dedicated to rescuing and rehoming Siberian Huskies and Alaskan Malamutes.</p>
-        <p>Founded by Heather Saville in 2013, we rescue over 120 dogs every year.</p>
+        <p>And Welcome...<br>
+        We are Saints Sled Dog Rescue, a non-profitable charity dedicated to rescuing and rehoming Siberian Husky and Alaskan Malamute breeds.</p>
+        <p>We were founded by Heather Saville in January 2013 and rescue on average 120 dogs per year!</p>
+        <p>To learn more about us and where it all began, head to our About Us page via the link below...</p>
         <a class="learn-more-btn" href="about.html">Learn more about our rescue</a>
       </div>
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section style="padding: 40px;">
-    <h2 style="text-align: center;">Our <span style="color: #790b82;">Services...</span></h2>
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; max-width: 1200px; margin: 0 auto;">
-
-      <!-- Column 1 -->
-      <div>
-        <div style="margin-bottom: 20px;">
-          <div style="background: #790b82; color: white; padding: 10px; font-weight: bold; border-radius: 6px;">🐾 Foster A Dog</div>
-          <p>Take a look at all the dogs currently waiting to become a SSDR dog.</p>
-        </div>
-        <div style="margin-bottom: 20px;">
-          <div style="background: #790b82; color: white; padding: 10px; font-weight: bold; border-radius: 6px;">🐾 Rehoming A Dog</div>
-          <p>Finding a dog a new home with breed experience, rescue back up for life and 24 hour support.</p>
-        </div>
-        <div style="margin-bottom: 20px;">
-          <div style="background: #790b82; color: white; padding: 10px; font-weight: bold; border-radius: 6px;">🐾 Gift Aid</div>
-          <p>You can make the most out of your donations by filling in a Gift Aid declaration form – 25p from EVERY £1 donated by you gets received!</p>
-        </div>
-        <div style="margin-bottom: 20px;">
-          <div style="background: #790b82; color: white; padding: 10px; font-weight: bold; border-radius: 6px;">🐾 Events</div>
-          <p>Keep up-to-date with country-wide events and even get in contact for an event near you!</p>
-        </div>
-        <div style="margin-bottom: 20px;">
-          <div style="background: #790b82; color: white; padding: 10px; font-weight: bold; border-radius: 6px;">🐾 Contact Us</div>
-          <p>If you are looking for some help or advice please contact one of our team members.</p>
-        </div>
-      </div>
-
-      <!-- Column 2 -->
-      <div>
-        <div style="margin-bottom: 20px;">
-          <div style="background: #790b82; color: white; padding: 10px; font-weight: bold; border-radius: 6px;">🐾 Adopt a Dog</div>
-          <p>Take a look at all the dogs looking for forever homes.</p>
-        </div>
-        <div style="margin-bottom: 20px;">
-          <div style="background: #790b82; color: white; padding: 10px; font-weight: bold; border-radius: 6px;">🐾 SSDR KENNELS</div>
-          <p>Find out more about our vision for SSDR Boarding and Rescue Kennels. We're aiming to raise £200,000!</p>
-        </div>
-        <div style="margin-bottom: 20px;">
-          <div style="background: #790b82; color: white; padding: 10px; font-weight: bold; border-radius: 6px;">🐾 SSDR CAMP</div>
-          <p>Join us for our annual SSDR Camp with hundreds of sled dogs – no sled dog needed to attend!</p>
-        </div>
-        <div style="margin-bottom: 20px;">
-          <div style="background: #790b82; color: white; padding: 10px; font-weight: bold; border-radius: 6px;">🐾 GET INVOLVED</div>
-          <p>Make a difference to a dog's life — fundraise, shop online, or help us raise essential funds.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Facebook Section -->
   <section style="padding: 40px; text-align: center;">
     <h2>Keep <span style="color: #790b82;">Pup</span> to Date</h2>
     <p>Follow us on Facebook for live updates from our community!</p>
-    <div class="fb-page"
-      data-href="https://www.facebook.com/groups/322436501200163"
-      data-tabs="timeline"
-      data-width="500"
-      data-height="600"
-      data-small-header="false"
-      data-adapt-container-width="true"
-      data-hide-cover="false"
+    <div class="fb-page" 
+      data-href="https://www.facebook.com/homesureproperty/" 
+      data-tabs="timeline" 
+      data-width="500" 
+      data-height="600" 
+      data-small-header="false" 
+      data-adapt-container-width="true" 
+      data-hide-cover="false" 
       data-show-facepile="true">
-      <blockquote cite="https://www.facebook.com/groups/322436501200163" class="fb-xfbml-parse-ignore">
-        <a href="https://www.facebook.com/groups/322436501200163">Saints Sled Dog Rescue</a>
+      <blockquote cite="https://www.facebook.com/homesureproperty/" class="fb-xfbml-parse-ignore">
+        <a href="https://www.facebook.com/homesureproperty/">Homesure Property - Sales, Lettings &amp; Investments</a>
       </blockquote>
     </div>
   </section>
 
-  <!-- Footer from external file -->
-  <div id="footer-placeholder"></div>
+  <!-- FOOTER START -->
+  <footer class="footer">
+    <div class="footer-section footer-logo">
+      <img src="assets/images/SSDR%20Logo.png" alt="SSDR Logo">
+      <p>Saints Sled Dog Rescue<br>Charity No. 1179637 (England) &amp; SCO44070 (Scotland)</p>
+    </div>
 
-  <!-- Carousel Script -->
+    <div class="footer-section">
+      <h3>Contact Us</h3>
+      <p>Email: info@saintssleddogrescue.co.uk</p>
+      <p>Phone: 07983 548370</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Links</h3>
+      <a href="index.html">Home</a>
+      <a href="meetourdogs.html">Meet Our Dogs</a>
+      <a href="fostering.html">Foster a Dog</a>
+      <a href="rehome.html">Rehome a Dog</a>
+      <a href="contact.html">Contact SSDR</a>
+      <a href="events.html">Events</a>
+      <a href="shop.html">Shop</a>
+      <a href="donate.html">Donate</a>
+    </div>
+  </footer>
+
+  <div class="footer-bottom">
+    &copy; 2025 Saints Sled Dog Rescue. All rights reserved.
+  </div>
+  <!-- FOOTER END -->
+
   <script>
     const slides = document.querySelectorAll('.carousel-image');
     let current = 0;
@@ -145,10 +130,8 @@
     setInterval(nextSlide, 4000);
   </script>
 
-  <!-- Facebook SDK -->
   <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous"
-    src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v23.0"></script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v23.0"></script>
 
 </body>
 </html>
