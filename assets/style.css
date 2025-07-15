@@ -47,6 +47,7 @@ body {
   color: #333;
 }
 
+/* Donate Button */
 .donate-btn {
   background-color: #790b82;
   color: white;
@@ -86,55 +87,6 @@ body {
 .navbar a:hover {
   color: #790b82;
   text-decoration: underline;
-}
-
-/* Footer */
-.footer {
-  background-color: #790b82;
-  color: white;
-  padding: 40px 20px;
-}
-
-.footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 20px;
-}
-
-.footer-logo img {
-  max-height: 100px;
-  width: auto;
-}
-
-.footer-section {
-  flex: 1 1 200px;
-  padding: 10px;
-}
-
-.footer-section h3 {
-  margin-top: 0;
-  font-size: 1.1rem;
-  color: #ffffff;
-}
-
-.footer-section a {
-  color: white;
-  text-decoration: none;
-  display: block;
-  margin-top: 5px;
-}
-
-.footer-section a:hover {
-  text-decoration: underline;
-}
-
-.footer-bottom {
-  background-color: #5e0668;
-  text-align: center;
-  padding: 10px;
-  font-size: 0.85rem;
 }
 
 /* Carousel */
@@ -179,6 +131,93 @@ body {
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
+/* Services Section (Two Column Layout) */
+.services-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 40px 20px;
+  background-color: white;
+}
+
+.service-block {
+  flex: 1 1 300px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f3f3f3;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.service-block h3 {
+  color: #790b82;
+  margin-top: 0;
+}
+
+.service-block p {
+  color: #444;
+}
+
+/* Facebook Section */
+.facebook-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.facebook-section h2 {
+  color: #790b82;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* Footer */
+.footer {
+  background-color: #790b82;
+  color: white;
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 0.95rem;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  padding: 10px;
+}
+
+.footer-section h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+.footer-section a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-top: 5px;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+.footer-logo img {
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  background-color: #5e0668;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.85rem;
+}
+
+/* Learn More Button */
 .learn-more-btn {
   display: inline-block;
   background-color: #790b82;
