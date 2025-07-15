@@ -36,6 +36,7 @@
 </nav>
 <!-- HEADER END -->
 
+<!-- INTRO SECTION -->
 <main style="padding: 40px; text-align: center;">
   <h2>Welcome to Saints Sled Dog Rescue</h2>
   <p>We are dedicated to the rescue, rehabilitation, and rehoming of sled dog breeds across the UK.</p>
@@ -43,7 +44,7 @@
   <a class="donate-btn" href="https://www.saintssleddogrescue.co.uk/donate" target="_blank">Support Our Work</a>
 </main>
 
-<!-- CAROUSEL START -->
+<!-- CAROUSEL SECTION -->
 <section class="carousel-container">
   <div class="carousel">
     <img class="carousel-image active" src="https://pet-health-content-media.chewy.com/wp-content/uploads/2024/09/11161625/202106husky-dog-breed-626230238-scaled-1.jpg" alt="Rescue Dog 1">
@@ -61,36 +62,33 @@
     </div>
   </div>
 </section>
-<!-- CAROUSEL END -->
 
 <!-- INFO TABLE SECTION -->
-<section style="padding: 40px; display: flex; justify-content: center;">
-  <table style="width: 80%; text-align: left; border-collapse: collapse;">
-    <tr>
-      <td><strong>📍 Location:</strong></td>
-      <td>UK-wide foster-based network</td>
-    </tr>
-    <tr>
-      <td><strong>🦴 Specialism:</strong></td>
-      <td>Siberian Huskies &amp; Alaskan Malamutes</td>
-    </tr>
-    <tr>
-      <td><strong>🧡 Founded:</strong></td>
-      <td>January 2013</td>
-    </tr>
-    <tr>
-      <td><strong>📅 Dogs Rehomed Annually:</strong></td>
-      <td>~120 per year</td>
-    </tr>
+<section style="padding: 40px;">
+  <table style="margin: 0 auto; text-align: left;">
+    <tr><td><strong>📍 Location:</strong></td><td>UK-wide foster-based network</td></tr>
+    <tr><td><strong>🔧 Specialism:</strong></td><td>Siberian Huskies & Alaskan Malamutes</td></tr>
+    <tr><td><strong>🧡 Founded:</strong></td><td>January 2013</td></tr>
+    <tr><td><strong>📅 Dogs Rehomed Annually:</strong></td><td>~120 per year</td></tr>
   </table>
 </section>
 
-<!-- FACEBOOK FEED -->
-<div class="fb-page" data-href="https://www.facebook.com/SaintsSledDogRescue" data-tabs="timeline" data-width="500" data-height="600" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-  <blockquote cite="https://www.facebook.com/SaintsSledDogRescue" class="fb-xfbml-parse-ignore">
-    <a href="https://www.facebook.com/SaintsSledDogRescue">Saints Sled Dog Rescue</a>
-  </blockquote>
-</div>
+<!-- FACEBOOK SECTION -->
+<section style="padding: 40px; text-align: center;">
+  <div class="fb-page"
+    data-href="https://www.facebook.com/saintssleddogrescue"
+    data-tabs="timeline"
+    data-width="500"
+    data-height=""
+    data-small-header="false"
+    data-adapt-container-width="true"
+    data-hide-cover="false"
+    data-show-facepile="true">
+    <blockquote cite="https://www.facebook.com/saintssleddogrescue" class="fb-xfbml-parse-ignore">
+      <a href="https://www.facebook.com/saintssleddogrescue">Saints Sled Dog Rescue</a>
+    </blockquote>
+  </div>
+</section>
 
 <!-- FOOTER START -->
 <footer class="footer">
@@ -123,6 +121,7 @@
 </div>
 <!-- FOOTER END -->
 
+<!-- CAROUSEL SCRIPT -->
 <script>
   const slides = document.querySelectorAll('.carousel-image');
   let current = 0;
@@ -142,8 +141,11 @@
   setInterval(nextSlide, 4000);
 </script>
 
+<!-- FACEBOOK SDK -->
 <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v23.0"></script>
+<script async defer crossorigin="anonymous"
+  src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v18.0">
+</script>
 
 </body>
 </html>
