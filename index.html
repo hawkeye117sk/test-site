@@ -4,108 +4,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Saints Sled Dog Rescue</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f7f7f7;
-      color: #333;
+
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    // Load header and footer from external HTML files
+    function loadHTML(id, url) {
+      fetch(url)
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById(id).innerHTML = data;
+        })
+        .catch(err => console.error('Error loading', url, err));
     }
 
-    header, footer {
-      background: #790b82;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    main {
-      padding: 40px;
-      text-align: center;
-    }
-
-    .donate-btn {
-      background-color: #790b82;
-      color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 6px;
-      font-weight: bold;
-      font-size: 1rem;
-      cursor: pointer;
-      box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
-      text-decoration: none;
-    }
-
-    /* Carousel styles */
-    .carousel-container {
-      position: relative;
-      max-width: 100%;
-      overflow: hidden;
-      margin: 40px auto;
-      height: 500px;
-    }
-
-    .carousel {
-      position: relative;
-      width: 100%;
-      height: 100%;
-    }
-
-    .carousel-image {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-    }
-
-    .carousel-image.active {
-      opacity: 1;
-    }
-
-    .carousel-textbox {
-      position: absolute;
-      bottom: 30px;
-      left: 30px;
-      background: rgba(0,0,0,0.5);
-      color: white;
-      padding: 20px;
-      border-radius: 8px;
-      max-width: 400px;
-    }
-
-    .carousel-textbox h2 {
-      margin-top: 0;
-    }
-
-    .learn-more-btn {
-      display: inline-block;
-      margin-top: 10px;
-      background: #fff;
-      color: #790b82;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-  </style>
+    window.onload = () => {
+      loadHTML("header-placeholder", "header.html");
+      loadHTML("footer-placeholder", "footer.html");
+    };
+  </script>
 </head>
+
 <body>
+  <!-- Header from external file -->
+  <div id="header-placeholder"></div>
 
-  <header>
-    <h1>Saints Sled Dog Rescue</h1>
-    <p>Email: info@saintssleddogrescue.co.uk | Phone: 07983 548370</p>
-  </header>
-
-  <main>
+  <main style="padding: 40px; text-align: center;">
     <h2>Welcome to Saints Sled Dog Rescue</h2>
     <p>We are dedicated to the rescue, rehabilitation, and rehoming of sled dog breeds across the UK.</p>
     <p>Explore our available dogs, learn how you can foster, or get involved with upcoming events.</p>
     <a class="donate-btn" href="https://www.saintssleddogrescue.co.uk/donate" target="_blank">Support Our Work</a>
   </main>
 
+  <!-- Carousel -->
   <section class="carousel-container">
     <div class="carousel">
       <img class="carousel-image active" src="https://pet-health-content-media.chewy.com/wp-content/uploads/2024/09/11161625/202106husky-dog-breed-626230238-scaled-1.jpg" alt="Rescue Dog 1">
@@ -115,96 +45,87 @@
 
       <div class="carousel-textbox">
         <h2><span style="color:#790b82">HELLO</span> <strong>FRIENDS!</strong></h2>
-        <p>And Welcome...<br>
-        We are Saints Sled Dog Rescue, a non-profitable charity dedicated to rescuing and rehoming Siberian Husky and Alaskan Malamute breeds.</p>
-        <p>We were founded by Heather Saville in January 2013 and rescue on average 120 dogs per year!</p>
-        <p>To learn more about us and where it all began, head to our About Us page via the link below...</p>
+        <p>We are Saints Sled Dog Rescue, a non-profit charity dedicated to rescuing and rehoming Siberian Huskies and Alaskan Malamutes.</p>
+        <p>Founded by Heather Saville in 2013, we rescue over 120 dogs every year.</p>
         <a class="learn-more-btn" href="about.html">Learn more about our rescue</a>
       </div>
     </div>
   </section>
 
+  <!-- Services Section -->
   <section style="padding: 40px;">
-  <h2 style="text-align: center;">Our <span style="color: #790b82;">Services...</span></h2>
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; max-width: 1200px; margin: 0 auto;">
-    
-    <!-- Column 1 -->
-    <div>
-      <div style="margin-bottom: 20px;">
-        <div style="background: #790b82; color: white; padding: 10px; font-weight: bold; border-radius: 6px;">🐾 Foster A Dog</div>
-        <p>Take a look at all the dogs currently waiting to become a SSDR dog.</p>
+    <h2 style="text-align: center;">Our <span style="color: #790b82;">Services...</span></h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; max-width: 1200px; margin: 0 auto;">
+
+      <!-- Column 1 -->
+      <div>
+        <div style="margin-bottom: 20px;">
+          <div style="background: #790b82; color: white; padding: 10px; font-weight: bold; border-radius: 6px;">🐾 Foster A Dog</div>
+          <p>Take a look at all the dogs currently waiting to become a SSDR dog.</p>
+        </div>
+        <div style="margin-bottom: 20px;">
+          <div style="background: #790b82; color: white; padding: 10px; font-weight: bold; border-radius: 6px;">🐾 Rehoming A Dog</div>
+          <p>Finding a dog a new home with breed experience, rescue back up for life and 24 hour support.</p>
+        </div>
+        <div style="margin-bottom: 20px;">
+          <div style="background: #790b82; color: white; padding: 10px; font-weight: bold; border-radius: 6px;">🐾 Gift Aid</div>
+          <p>You can make the most out of your donations by filling in a Gift Aid declaration form – 25p from EVERY £1 donated by you gets received!</p>
+        </div>
+        <div style="margin-bottom: 20px;">
+          <div style="background: #790b82; color: white; padding: 10px; font-weight: bold; border-radius: 6px;">🐾 Events</div>
+          <p>Keep up-to-date with country-wide events and even get in contact for an event near you!</p>
+        </div>
+        <div style="margin-bottom: 20px;">
+          <div style="background: #790b82; color: white; padding: 10px; font-weight: bold; border-radius: 6px;">🐾 Contact Us</div>
+          <p>If you are looking for some help or advice please contact one of our team members.</p>
+        </div>
       </div>
 
-      <div style="margin-bottom: 20px;">
-        <div style="background: #790b82; color: white; padding: 10px; font-weight: bold; border-radius: 6px;">🐾 Rehoming A Dog</div>
-        <p>Finding a dog a new home with breed experience, rescue back up for life and 24 hour support.</p>
-      </div>
-
-      <div style="margin-bottom: 20px;">
-        <div style="background: #790b82; color: white; padding: 10px; font-weight: bold; border-radius: 6px;">🐾 Gift Aid</div>
-        <p>You can make the most out of your donations by filling in a Gift Aid declaration form – 25p from EVERY £1 donated by you gets received!</p>
-      </div>
-
-      <div style="margin-bottom: 20px;">
-        <div style="background: #790b82; color: white; padding: 10px; font-weight: bold; border-radius: 6px;">🐾 Events</div>
-        <p>Keep up-to-date with country-wide events and even get in contact for an event near you!</p>
-      </div>
-
-      <div style="margin-bottom: 20px;">
-        <div style="background: #790b82; color: white; padding: 10px; font-weight: bold; border-radius: 6px;">🐾 Contact Us</div>
-        <p>If you are looking for some help or advice please contact one of our team members.</p>
-      </div>
-    </div>
-
-    <!-- Column 2 -->
-    <div>
-      <div style="margin-bottom: 20px;">
-        <div style="background: #790b82; color: white; padding: 10px; font-weight: bold; border-radius: 6px;">🐾 Adopt a Dog</div>
-        <p>Take a look at all the dogs looking for forever homes.</p>
-      </div>
-
-      <div style="margin-bottom: 20px;">
-        <div style="background: #790b82; color: white; padding: 10px; font-weight: bold; border-radius: 6px;">🐾 SSDR KENNELS</div>
-        <p>Find out more about our vision of the SSDR Boarding and Rescue Kennels HERE. We hope to raise £200,000 to start up our very own sled dog rescue centre.</p>
-      </div>
-
-      <div style="margin-bottom: 20px;">
-        <div style="background: #790b82; color: white; padding: 10px; font-weight: bold; border-radius: 6px;">🐾 SSDR CAMP</div>
-        <p>Find out more about our Annual Camp and join us along with HUNDREDS of sled dogs. You don’t have to be a sled dog owner to attend!</p>
-      </div>
-
-      <div style="margin-bottom: 20px;">
-        <div style="background: #790b82; color: white; padding: 10px; font-weight: bold; border-radius: 6px;">🐾 GET INVOLVED</div>
-        <p>Find out how to make a real difference to a dog's life — challenge yourself to fundraise, shop online, and raise much-needed funds.</p>
+      <!-- Column 2 -->
+      <div>
+        <div style="margin-bottom: 20px;">
+          <div style="background: #790b82; color: white; padding: 10px; font-weight: bold; border-radius: 6px;">🐾 Adopt a Dog</div>
+          <p>Take a look at all the dogs looking for forever homes.</p>
+        </div>
+        <div style="margin-bottom: 20px;">
+          <div style="background: #790b82; color: white; padding: 10px; font-weight: bold; border-radius: 6px;">🐾 SSDR KENNELS</div>
+          <p>Find out more about our vision for SSDR Boarding and Rescue Kennels. We're aiming to raise £200,000!</p>
+        </div>
+        <div style="margin-bottom: 20px;">
+          <div style="background: #790b82; color: white; padding: 10px; font-weight: bold; border-radius: 6px;">🐾 SSDR CAMP</div>
+          <p>Join us for our annual SSDR Camp with hundreds of sled dogs – no sled dog needed to attend!</p>
+        </div>
+        <div style="margin-bottom: 20px;">
+          <div style="background: #790b82; color: white; padding: 10px; font-weight: bold; border-radius: 6px;">🐾 GET INVOLVED</div>
+          <p>Make a difference to a dog's life — fundraise, shop online, or help us raise essential funds.</p>
+        </div>
       </div>
     </div>
+  </section>
 
-  </div>
-</section>
-
+  <!-- Facebook Section -->
   <section style="padding: 40px; text-align: center;">
-  <h2>Keep <span style="color: #790b82;">Pup</span> to Date</h2>
-  <p>Follow us on Facebook for live updates from our community!</p>
-  <div class="fb-page" 
-    data-href="https://www.facebook.com/homesureproperty/" 
-    data-tabs="timeline" 
-    data-width="500" 
-    data-height="600" 
-    data-small-header="false" 
-    data-adapt-container-width="true" 
-    data-hide-cover="false" 
-    data-show-facepile="true"><blockquote cite="https://www.facebook.com/homesureproperty/" class="fb-xfbml-parse-ignore">
-      <a href="https://www.facebook.com/homesureproperty/">Homesure Property - Sales, Lettings &amp; Investments</a>
-    </blockquote>
-  </div>
-</section>
+    <h2>Keep <span style="color: #790b82;">Pup</span> to Date</h2>
+    <p>Follow us on Facebook for live updates from our community!</p>
+    <div class="fb-page"
+      data-href="https://www.facebook.com/groups/322436501200163"
+      data-tabs="timeline"
+      data-width="500"
+      data-height="600"
+      data-small-header="false"
+      data-adapt-container-width="true"
+      data-hide-cover="false"
+      data-show-facepile="true">
+      <blockquote cite="https://www.facebook.com/groups/322436501200163" class="fb-xfbml-parse-ignore">
+        <a href="https://www.facebook.com/groups/322436501200163">Saints Sled Dog Rescue</a>
+      </blockquote>
+    </div>
+  </section>
 
+  <!-- Footer from external file -->
+  <div id="footer-placeholder"></div>
 
-  
-  <footer>
-    <p>Saints Sled Dog Rescue – Charity No. 1179637 (England) & SCO44070 (Scotland)</p>
-  </footer>
-
+  <!-- Carousel Script -->
   <script>
     const slides = document.querySelectorAll('.carousel-image');
     let current = 0;
@@ -224,8 +145,10 @@
     setInterval(nextSlide, 4000);
   </script>
 
+  <!-- Facebook SDK -->
   <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v23.0"></script>
+  <script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v23.0"></script>
 
 </body>
 </html>
