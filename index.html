@@ -22,10 +22,12 @@
   <!-- Carousel Section -->
   <section class="carousel-container">
     <div class="carousel">
-      <img class="carousel-image" src="https://pet-health-content-media.chewy.com/wp-content/uploads/2024/09/11161625/202106husky-dog-breed-626230238-scaled-1.jpg" alt="Rescue Dog 1">
+      <!-- Add 'active' to first image -->
+      <img class="carousel-image active" src="https://pet-health-content-media.chewy.com/wp-content/uploads/2024/09/11161625/202106husky-dog-breed-626230238-scaled-1.jpg" alt="Rescue Dog 1">
       <img class="carousel-image" src="https://www.akc.org/wp-content/uploads/2017/11/Siberian-Husky-standing-outdoors-in-the-winter.jpg" alt="Rescue Dog 2">
       <img class="carousel-image" src="https://cdn.wamiz.fr/cdn-cgi/image/format=auto,quality=80,width=532,height=532,fit=cover/animal/breed/dog/adult/668c0c22a4bcf765839764.jpg" alt="Rescue Dog 3">
       <img class="carousel-image" src="https://www.barkbusters.co.uk/files/dog-breed/husky/husky-wolf.webp" alt="Rescue Dog 4">
+      
       <div class="carousel-textbox">
         <h2><span style="color:#790b82">HELLO</span> <strong>FRIENDS!</strong></h2>
         <p>And Welcome...<br>
@@ -54,7 +56,7 @@
           document.getElementById('footer').innerHTML = html;
         })
     ]).then(() => {
-      // Carousel script
+      // ✅ Carousel script
       const slides = document.querySelectorAll('.carousel-image');
       let currentSlide = 0;
 
@@ -73,7 +75,7 @@
       }
 
       showSlide(currentSlide);
-      setInterval(nextSlide, 4000);
+      setInterval(nextSlide, 4000); // Change every 4 seconds
     });
   </script>
 </body>
