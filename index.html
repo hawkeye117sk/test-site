@@ -26,7 +26,7 @@
 </header>
 
 <nav class="navbar">
-  <a href="index.html">Home</a>
+  <a href="index.html" class="active">Home</a>
   <a href="meetourdogs.html">Meet Our Dogs</a>
   <a href="fostering.html">Foster a Dog</a>
   <a href="rehome.html">Rehome a Dog</a>
@@ -43,6 +43,7 @@
   <a class="donate-btn" href="https://www.saintssleddogrescue.co.uk/donate" target="_blank">Support Our Work</a>
 </main>
 
+<!-- CAROUSEL START -->
 <section class="carousel-container">
   <div class="carousel">
     <img class="carousel-image active" src="https://pet-health-content-media.chewy.com/wp-content/uploads/2024/09/11161625/202106husky-dog-breed-626230238-scaled-1.jpg" alt="Rescue Dog 1">
@@ -60,10 +61,36 @@
     </div>
   </div>
 </section>
+<!-- CAROUSEL END -->
 
-<!-- SERVICES SECTION OMITTED FOR BREVITY - REINSERT HERE IF NEEDED -->
+<!-- INFO TABLE SECTION -->
+<section style="padding: 40px; display: flex; justify-content: center;">
+  <table style="width: 80%; text-align: left; border-collapse: collapse;">
+    <tr>
+      <td><strong>📍 Location:</strong></td>
+      <td>UK-wide foster-based network</td>
+    </tr>
+    <tr>
+      <td><strong>🦴 Specialism:</strong></td>
+      <td>Siberian Huskies &amp; Alaskan Malamutes</td>
+    </tr>
+    <tr>
+      <td><strong>🧡 Founded:</strong></td>
+      <td>January 2013</td>
+    </tr>
+    <tr>
+      <td><strong>📅 Dogs Rehomed Annually:</strong></td>
+      <td>~120 per year</td>
+    </tr>
+  </table>
+</section>
 
-<!-- FACEBOOK SECTION OMITTED FOR BREVITY - REINSERT HERE IF NEEDED -->
+<!-- FACEBOOK FEED -->
+<div class="fb-page" data-href="https://www.facebook.com/SaintsSledDogRescue" data-tabs="timeline" data-width="500" data-height="600" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+  <blockquote cite="https://www.facebook.com/SaintsSledDogRescue" class="fb-xfbml-parse-ignore">
+    <a href="https://www.facebook.com/SaintsSledDogRescue">Saints Sled Dog Rescue</a>
+  </blockquote>
+</div>
 
 <!-- FOOTER START -->
 <footer class="footer">
@@ -97,29 +124,26 @@
 <!-- FOOTER END -->
 
 <script>
-  window.addEventListener('DOMContentLoaded', () => {
-    const slides = document.querySelectorAll('.carousel-image');
-    let current = 0;
+  const slides = document.querySelectorAll('.carousel-image');
+  let current = 0;
 
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.classList.remove('active');
-        if (i === index) slide.classList.add('active');
-      });
-    }
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active');
+      if (i === index) slide.classList.add('active');
+    });
+  }
 
-    function nextSlide() {
-      current = (current + 1) % slides.length;
-      showSlide(current);
-    }
+  function nextSlide() {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  }
 
-    showSlide(current); // show the first slide immediately
-    setInterval(nextSlide, 4000);
-  });
+  setInterval(nextSlide, 4000);
 </script>
-
 
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v23.0"></script>
+
 </body>
 </html>
