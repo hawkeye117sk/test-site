@@ -36,6 +36,16 @@
 </nav>
 <!-- HEADER END -->
 
+<!-- CAROUSEL START -->
+<div class="carousel-container">
+  <div class="carousel">
+    <img src="assets/images/carousel1.jpg" class="carousel-image active" alt="Slide 1">
+    <img src="assets/images/carousel2.jpg" class="carousel-image" alt="Slide 2">
+    <img src="assets/images/carousel3.jpg" class="carousel-image" alt="Slide 3">
+  </div>
+</div>
+<!-- CAROUSEL END -->
+
 <main style="padding: 40px; text-align: center;">
   <h2>Welcome to Saints Sled Dog Rescue</h2>
   <p>We are dedicated to the rescue, rehabilitation, and rehoming of sled dog breeds across the UK.</p>
@@ -85,6 +95,25 @@
   &copy; 2025 Saints Sled Dog Rescue. All rights reserved.
 </div>
 <!-- FOOTER END -->
+
+<!-- CAROUSEL SCRIPT -->
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.carousel-image');
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  setInterval(nextSlide, 5000);
+</script>
 
 </body>
 </html>
