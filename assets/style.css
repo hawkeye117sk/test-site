@@ -123,10 +123,11 @@ body {
 }
 
 .footer-logo-wrapper {
-  background-color: white;
-  padding: 10px;
-  border-radius: 8px;
+  background-color: transparent; /* updated from white */
+  padding: 0;                    /* optional: removed padding */
+  border-radius: 0;              /* optional: removed rounded corners */
   display: inline-block;
+  text-align: center;
 }
 
 .footer-logo img {
