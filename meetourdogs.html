@@ -1,22 +1,32 @@
 <style>
-.asm3-adoptable-thumbnail {
-  border-radius: 10px;
+.asm3-adoptable-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.asm3-adoptable-item {
   max-width: 250px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+.asm3-adoptable-thumbnail {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
 }
 .asm3-adoptable-name {
   font-weight: bold;
   font-size: 1.2rem;
-  margin-top: 6px;
+  margin-top: 8px;
 }
 </style>
 
 <script>
-asm3_adoptable_filters = "sex breed agegroup size species";
-asm3_adoptable_sort = "-DAYSONSHELTER"; // Longest stay first
-asm3_adoptable_iframe = true; // View in popup
+asm3_adoptable_iframe = true;
 function asm3_adoptable_filter(a) {
-  return a.SPECIESNAME === "Dog"; // Show dogs only
+  return a.DISPLAYLOCATIONNAME && a.DISPLAYLOCATIONNAME.toLowerCase().includes("foster");
 }
 </script>
 
