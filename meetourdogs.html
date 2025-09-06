@@ -36,6 +36,9 @@
 </nav>
 <!-- HEADER END -->
 
+</body>
+</html>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Adoptable Foster Dogs</title>
@@ -113,3 +116,67 @@
   <script src="https://eur01d.sheltermanager.com/service?method=animal_view_adoptable_js&account=ss0796"></script>
 </body>
 </html>
+
+<!-- INFO SECTION -->
+<section style="display: flex; justify-content: center; padding: 40px;">
+  <table>
+    <tr><td>📍 <strong>Location:</strong></td><td>UK-wide foster-based network</td></tr>
+    <tr><td>🔧 <strong>Specialism:</strong></td><td>Siberian Huskies & Alaskan Malamutes</td></tr>
+    <tr><td>🧡 <strong>Founded:</strong></td><td>January 2013</td></tr>
+    <tr><td>📅 <strong>Dogs Rehomed Annually:</strong></td><td>~120 per year</td></tr>
+  </table>
+</section>
+
+<!-- FOOTER START -->
+<footer class="footer">
+  <div class="footer-section footer-logo">
+    <div class="footer-logo-wrapper">
+      <img src="assets/images/ssdr-dog.png" alt="SSDR Dog">
+    </div>
+    <p>Saints Sled Dog Rescue<br>Charity No. 1179637 (England) &amp; SCO44070 (Scotland)</p>
+  </div>
+
+  <div class="footer-section">
+    <h3>Contact Us</h3>
+    <p>Email: info@saintssleddogrescue.co.uk</p>
+    <p>Phone: 07983 548370</p>
+  </div>
+
+  <div class="footer-section">
+    <h3>Links</h3>
+    <a href="index.html">Home</a>
+    <a href="meetourdogs.html">Meet Our Dogs</a>
+    <a href="fostering.html">Foster a Dog</a>
+    <a href="rehome.html">Rehome a Dog</a>
+    <a href="contact.html">Contact SSDR</a>
+    <a href="events.html">Events</a>
+    <a href="shop.html">Shop</a>
+    <a href="donate.html">Donate</a>
+  </div>
+</footer>
+
+<div class="footer-bottom">
+  &copy; 2025 Saints Sled Dog Rescue. All rights reserved.
+</div>
+<!-- FOOTER END -->
+
+<!-- CAROUSEL SCRIPT -->
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.carousel-image');
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  setInterval(nextSlide, 5000);
+</script>
+
+
