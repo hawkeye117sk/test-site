@@ -1,34 +1,80 @@
-<style>
-.asm3-adoptable-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-}
-.asm3-adoptable-item {
-  max-width: 250px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background: #f9f9f9;
-}
-.asm3-adoptable-thumbnail {
-  border-radius: 8px;
-  width: 100%;
-  height: auto;
-}
-.asm3-adoptable-name {
-  font-weight: bold;
-  font-size: 1.2rem;
-  margin-top: 8px;
-}
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Adoptable Foster Dogs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px;
+      background: #f3f3f3;
+    }
 
-<script>
-asm3_adoptable_iframe = true;
-function asm3_adoptable_filter(a) {
-  return a.DISPLAYLOCATIONNAME && a.DISPLAYLOCATIONNAME.toLowerCase().includes("foster");
-}
-</script>
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
 
-<div id="asm3-adoptables"></div>
-<script src="https://eur01d.sheltermanager.com/service?method=animal_view_adoptable_js&account=ss0796"></script>
+    .asm3-adoptable-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .asm3-adoptable-item {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      padding: 15px;
+      max-width: 300px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .asm3-adoptable-item:hover {
+      transform: translateY(-4px);
+    }
+
+    .asm3-adoptable-thumbnail {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .asm3-adoptable-name {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-top: 12px;
+      text-align: center;
+    }
+
+    .asm3-adoptable-tagline {
+      margin-top: 6px;
+      text-align: center;
+      color: #555;
+    }
+  </style>
+
+  <script>
+    asm3_adoptable_iframe = true;
+    asm3_adoptable_sort = "-DAYSONSHELTER"; // Longest stay first
+    asm3_adoptable_filters = "sex breed agegroup size species";
+
+    // Filter for dogs in a location that includes 'foster'
+    function asm3_adoptable_filter(a) {
+      return a.SPECIESNAME === "Dog" &&
+        a.DISPLAYLOCATIONNAME &&
+        a.DISPLAYLOCATIONNAME.toLowerCase().includes("foster");
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Meet Our Foster Dogs</h1>
+  <div id="asm3-adoptables"></div>
+  <script src="https://eur01d.sheltermanager.com/service?method=animal_view_adoptable_js&account=ss0796"></script>
+</body>
+</html>
