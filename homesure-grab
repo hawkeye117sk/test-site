@@ -1,0 +1,1666 @@
+
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+	<meta charset="UTF-8">
+<script>
+var gform;gform||(document.addEventListener("gform_main_scripts_loaded",function(){gform.scriptsLoaded=!0}),document.addEventListener("gform/theme/scripts_loaded",function(){gform.themeScriptsLoaded=!0}),window.addEventListener("DOMContentLoaded",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,themeScriptsLoaded:!1,isFormEditor:()=>"function"==typeof InitializeEditor,callIfLoaded:function(o){return!(!gform.domLoaded||!gform.scriptsLoaded||!gform.themeScriptsLoaded&&!gform.isFormEditor()||(gform.isFormEditor()&&console.warn("The use of gform.initializeOnLoaded() is deprecated in the form editor context and will be removed in Gravity Forms 3.1."),o(),0))},initializeOnLoaded:function(o){gform.callIfLoaded(o)||(document.addEventListener("gform_main_scripts_loaded",()=>{gform.scriptsLoaded=!0,gform.callIfLoaded(o)}),document.addEventListener("gform/theme/scripts_loaded",()=>{gform.themeScriptsLoaded=!0,gform.callIfLoaded(o)}),window.addEventListener("DOMContentLoaded",()=>{gform.domLoaded=!0,gform.callIfLoaded(o)}))},hooks:{action:{},filter:{}},addAction:function(o,r,e,t){gform.addHook("action",o,r,e,t)},addFilter:function(o,r,e,t){gform.addHook("filter",o,r,e,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,r){gform.removeHook("action",o,r)},removeFilter:function(o,r,e){gform.removeHook("filter",o,r,e)},addHook:function(o,r,e,t,n){null==gform.hooks[o][r]&&(gform.hooks[o][r]=[]);var d=gform.hooks[o][r];null==n&&(n=r+"_"+d.length),gform.hooks[o][r].push({tag:n,callable:e,priority:t=null==t?10:t})},doHook:function(r,o,e){var t;if(e=Array.prototype.slice.call(e,1),null!=gform.hooks[r][o]&&((o=gform.hooks[r][o]).sort(function(o,r){return o.priority-r.priority}),o.forEach(function(o){"function"!=typeof(t=o.callable)&&(t=window[t]),"action"==r?t.apply(null,e):e[0]=t.apply(null,e)})),"filter"==r)return e[0]},removeHook:function(o,r,t,n){var e;null!=gform.hooks[o][r]&&(e=(e=gform.hooks[o][r]).filter(function(o,r,e){return!!(null!=n&&n!=o.tag||null!=t&&t!=o.priority)}),gform.hooks[o][r]=e)}});
+</script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="stylesheet" href="https://use.typekit.net/uqe7ubd.css">
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	
+
+</style>
+<style id='safe-svg-svg-icon-style-inline-css'>
+.safe-svg-cover{text-align:center}.safe-svg-cover .safe-svg-inside{display:inline-block;max-width:100%}.safe-svg-cover svg{height:100%;max-height:100%;max-width:100%;width:100%}
+
+</style>
+<style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #fff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--blue: #0d6efd;--wp--preset--color--indigo: #6610f2;--wp--preset--color--purple: #6f42c1;--wp--preset--color--pink: #d63384;--wp--preset--color--red: #dc3545;--wp--preset--color--orange: #fd7e14;--wp--preset--color--yellow: #ffc107;--wp--preset--color--green: #198754;--wp--preset--color--teal: #20c997;--wp--preset--color--cyan: #0dcaf0;--wp--preset--color--gray: #6c757d;--wp--preset--color--gray-dark: #343a40;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='understrap-styles-css' href='https://homesureproperty.co.uk/wp-content/themes/homesure/css/theme.min.css?ver=1.1.0.1722285352' media='all' />
+<link rel='stylesheet' id='glow-worker-css' href='https://homesureproperty.co.uk/wp-content/plugins/glow/public/css/glow-worker-public.css?ver=3.3.6' media='all' />
+<link rel='stylesheet' id='wppf-carousel-css' href='https://homesureproperty.co.uk/wp-content/plugins/wp-property-feed/css/wppf.carousel.css?ver=6.8.2' media='all' />
+<link rel='stylesheet' id='swiperjs-css' href='https://homesureproperty.co.uk/wp-content/plugins/wp-property-feed/css/swiper-bundle.min.css?ver=6.8.2' media='all' />
+<link rel='stylesheet' id='simple-lightbox-css' href='https://homesureproperty.co.uk/wp-content/plugins/wp-property-feed/css/simple-lightbox.min.css?ver=6.8.2' media='all' />
+<link rel='stylesheet' id='magnific-popup-css' href='https://homesureproperty.co.uk/wp-content/plugins/wp-property-feed/css/magnific-popup.css?ver=6.8.2' media='all' />
+<link rel='stylesheet' id='leaflet-css' href='https://homesureproperty.co.uk/wp-content/plugins/wp-property-feed/css/leaflet.css?ver=6.8.2' media='all' />
+<link rel='stylesheet' id='easycomplete-css' href='https://homesureproperty.co.uk/wp-content/plugins/wp-property-feed/css/easy-autocomplete.min.css?ver=6.8.2' media='all' />
+<link rel='stylesheet' id='wppf_properties-css' href='https://homesureproperty.co.uk/wp-content/plugins/wp-property-feed/css/wppf.css?ver=1.332' media='all' />
+<script src="https://homesureproperty.co.uk/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script src="https://homesureproperty.co.uk/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script src="https://homesureproperty.co.uk/wp-content/plugins/glow/public/js/glow-worker-public.js?ver=3.3.6" id="glow-worker-js"></script>
+<script src="https://homesureproperty.co.uk/wp-content/plugins/wp-property-feed/js/jquery.cookie.js?ver=6.8.2" id="jquery-cookie-js"></script>
+<script src="https://homesureproperty.co.uk/wp-content/plugins/wp-property-feed/js/jquery.matchHeight.js?ver=6.8.2" id="jquery-matchheight-js"></script>
+<script src="https://homesureproperty.co.uk/wp-content/plugins/wp-property-feed/js/jquery.truncate.min.js?ver=6.8.2" id="jquery-truncate-js"></script>
+<script src="https://homesureproperty.co.uk/wp-content/plugins/wp-property-feed/js/wppf.carousel.min.js?ver=6.8.2" id="wppf-carousel-js"></script>
+<script src="https://homesureproperty.co.uk/wp-content/plugins/wp-property-feed/js/swiper-bundle.min.js?ver=6.8.2" id="swiperjs-js"></script>
+<script src="https://homesureproperty.co.uk/wp-content/plugins/wp-property-feed/js/simple-lightbox.jquery.min.js?ver=6.8.2" id="simple-lightbox-js"></script>
+<script src="https://homesureproperty.co.uk/wp-content/plugins/wp-property-feed/js/magnific-popup.js?ver=6.8.2" id="magnific-popup-js"></script>
+<script src="https://homesureproperty.co.uk/wp-content/plugins/wp-property-feed/js/jquery.validate.min.js?ver=6.8.2" id="jquery-validate-js"></script>
+<script src="https://homesureproperty.co.uk/wp-content/plugins/wp-property-feed/js/leaflet.js?ver=6.8.2" id="leaflet-js"></script>
+<script src="https://homesureproperty.co.uk/wp-content/plugins/wp-property-feed/js/jquery.easy-autocomplete.min.js?ver=6.8.2" id="easycomplete-js"></script>
+<script id="wppf-map-js-extra">
+var maps = {"autocomplete":"on","map_tile":"https:\/\/{s}.tile.openstreetmap.org\/{z}\/{x}\/{y}.png"};
+</script>
+<script src="https://homesureproperty.co.uk/wp-content/plugins/wp-property-feed/js/wppf_default_map.js?ver=6.8.2" id="wppf-map-js"></script>
+<script id="wppf_properties-js-extra">
+var wppf = {"ajaxurl":"https:\/\/homesureproperty.co.uk\/wp-admin\/admin-ajax.php"};
+</script>
+<script src="https://homesureproperty.co.uk/wp-content/plugins/wp-property-feed/js/wppf.js?ver=1.332" id="wppf_properties-js"></script>
+<link rel="https://api.w.org/" href="https://homesureproperty.co.uk/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://homesureproperty.co.uk/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.8.2" />
+<meta name="generator" content="Site Kit by Google 1.157.0" /><meta name="generator" content="performance-lab 3.9.0; plugins: ">
+<link rel="apple-touch-icon" sizes="180x180" href="/wp-content/uploads/fbrfg/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/wp-content/uploads/fbrfg/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/wp-content/uploads/fbrfg/favicon-16x16.png">
+<link rel="manifest" href="/wp-content/uploads/fbrfg/site.webmanifest">
+<link rel="mask-icon" href="/wp-content/uploads/fbrfg/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/wp-content/uploads/fbrfg/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/wp-content/uploads/fbrfg/browserconfig.xml">
+<meta name="theme-color" content="#ffffff"><meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Homesure - Property sales, rentals, lettings and more throughout Merseyside, Cheshire, &amp; Lancashire">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src=https://www.googletagmanager.com/gtag/js?id=G-PBLNQ136TW></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PBLNQ136TW');
+</script></head>
+	
+	<!-- ******************* The Navbar Area ******************* -->
+	<header id="wrapper-navbar" class="page-header" style="position:relative; z-index:1050;">
+		<a class="skip-link sr-only sr-only-focusable" href="#content">Skip to content</a>
+		
+<div class="topbar" aria-labelledby="main-nav-label">
+
+	<div class="container--wide">
+        
+        <div class="row">
+
+            <div class="col"><ul id="topbar-left" class="topbar__menu topbar__menu--left navbar-nav"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-14153" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14153 nav-item"><a title="Report a Repair" target="_blank" rel="noopener noreferrer" href="https://homesureproperty.propertyfile.co.uk/tenant" class="nav-link">Report a Repair</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40 nav-item"><a title="Landlord &amp; Tenant Portal" href="https://homesureproperty.co.uk/landlord-tenant-hub/" class="nav-link">Landlord &#038; Tenant Portal</a></li>
+</ul></div>
+            <!-- The WordPress Menu goes here -->
+            <div class="col"><ul id="topbar-centre" class="topbar__menu topbar__menu--centre navbar-nav"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-42" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42 nav-item"><a title="Woolton 0151 722 22 22" href="tel:01517222222" class="nav-link">Woolton 0151 722 22 22</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-43" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43 nav-item"><a title="Prescot 0151 289 55 41" href="tel:01512895541" class="nav-link">Prescot 0151 289 55 41</a></li>
+</ul></div>
+            <div class="col"><ul id="topbar-right" class="topbar__menu topbar__menu--right navbar-nav"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-46" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-46 nav-item"><a title="Refer a Friend" href="https://homesureproperty.co.uk/refer-a-friend/" class="nav-link">Refer a Friend</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-47" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-47 nav-item"><a title="About Us" href="#" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-47">About Us</a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-47" >
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-14143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14143 nav-item"><a title="About us" href="https://homesureproperty.co.uk/about-us/" class="dropdown-item">About us</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-3399" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3399 nav-item"><a title="Careers" href="https://homesureproperty.co.uk/careers/" class="dropdown-item">Careers</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-3400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3400 nav-item"><a title="Resources" href="https://homesureproperty.co.uk/resources/" class="dropdown-item">Resources</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-146335" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-146335 nav-item"><a title="Frequently asked questions" href="https://homesureproperty.co.uk/frequently-asked-questions/" class="dropdown-item">Frequently asked questions</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-45" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45 nav-item"><a title="Latest news" href="https://homesureproperty.co.uk/latest-news/" class="dropdown-item">Latest news</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-146232" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-146232 nav-item"><a title="Charity" href="https://homesureproperty.co.uk/charity/" class="dropdown-item">Charity</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-146374" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-146374 nav-item"><a title="Applying for your new home" href="https://homesureproperty.co.uk/apply-for-your-new-home/" class="dropdown-item">Applying for your new home</a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44 nav-item"><a title="Contact" href="https://homesureproperty.co.uk/contact-us/" class="nav-link">Contact</a></li>
+</ul></div>
+        </div>
+
+	</div><!-- .container(-fluid) -->
+
+</div><!-- .topbar -->
+		
+<nav id="main-nav" class="navbar navbar-expand-md" aria-labelledby="main-nav-label">
+
+	<h2 id="main-nav-label" class="screen-reader-text">
+		Main Navigation	</h2>
+
+	<div class="container--wide">
+
+		<div class="row align-items-center">
+
+			<div class="col d-flex justify-content-center navbar__brand">
+				<a rel="home" href="https://homesureproperty.co.uk/" itemprop="url">
+					<img data-aos="fade-right" data-aos-delay="0" class="img-fluid navbar__brand__img" alt="Homesure" src="https://homesureproperty.co.uk/wp-content/themes/homesure/img/logo.svg">
+				</a>
+			</div>
+
+			<div class="d-flex">
+				<!-- The WordPress Menu goes here -->
+				<div class="col d-lg-flex justify-content-center"><ul id="primary-left-menu" class="navbar-nav d-none d-lg-flex"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-32050033" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item active menu-item-32050033 nav-item"><a title="Buy" href="/property/?wppf_search=to-buy&#038;wppf_branch=&#038;wppf_min_price=&#038;wppf_soldlet=default&#038;wppf_orderby=price-desc&#038;wppf_view=grid&#038;wppf_lat=&#038;wppf_lng=&#038;wppf_radius=Text+Match+Only+%28no+radius%29&#038;wppf_records=12" class="nav-link" aria-current="page">Buy</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-32050034" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32050034 nav-item"><a title="Sell" href="https://homesureproperty.co.uk/sell-your-home/" class="nav-link">Sell</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-32050035" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32050035 nav-item"><a title="Rent" href="/property/?wppf_search=to-rent&#038;wppf_branch=&#038;wppf_min_price=&#038;wppf_soldlet=default&#038;wppf_orderby=price-desc&#038;wppf_view=grid&#038;wppf_lat=&#038;wppf_lng=&#038;wppf_radius=Text+Match+Only+%28no+radius%29&#038;wppf_records=12" class="nav-link">Rent</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-32050036" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32050036 nav-item"><a title="Let" href="https://homesureproperty.co.uk/let-your-home/" class="nav-link">Let</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-32050039" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32050039 nav-item"><a title="Invest" href="https://homesureproperty.co.uk/investments/" class="nav-link">Invest</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-52693714" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52693714 nav-item"><a title="Block" href="https://homesureproperty.co.uk/block-management/" class="nav-link">Block</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-32050037" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32050037 nav-item"><a title="Auctions" href="http://auctions.homesureproperty.co.uk" class="nav-link">Auctions</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-32050038" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32050038 nav-item"><a title="Valuations" href="https://homesureproperty.co.uk/valuations/" class="nav-link">Valuations</a></li>
+</ul></div>				<!-- end brand -->
+
+				<!-- The WordPress Menu goes here -->
+							</div>
+
+			<!-- <button type="button" class="btn-close btn-close-white text-reset d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-label="Close"></button> -->
+
+			<div class="menu-button closed d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-label="Close">
+				<div class="hamburger">
+					<span class="top-bar"></span>
+					<span class="middle-bar"></span>
+					<span class="bottom-bar"></span>
+				</div>
+			</div>
+		
+		</div>
+
+	</div><!-- .container(-fluid) -->
+
+</nav><!-- .site-navigation -->
+	</header><!-- #wrapper-navbar end -->
+
+	<div class="offcanvas offcanvas-top" data-bs-scroll="false" data-bs-backdrop="true" id="offcanvas">
+		<div class="offcanvas-body">
+			<div class="navbar--mobile">
+				<ul id="menu-new-menu" class="navbar--mobile__nav"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item active menu-item-32050033 nav-item"><a title="Buy" href="/property/?wppf_search=to-buy&#038;wppf_branch=&#038;wppf_min_price=&#038;wppf_soldlet=default&#038;wppf_orderby=price-desc&#038;wppf_view=grid&#038;wppf_lat=&#038;wppf_lng=&#038;wppf_radius=Text+Match+Only+%28no+radius%29&#038;wppf_records=12" class="nav-link" aria-current="page">Buy</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32050034 nav-item"><a title="Sell" href="https://homesureproperty.co.uk/sell-your-home/" class="nav-link">Sell</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32050035 nav-item"><a title="Rent" href="/property/?wppf_search=to-rent&#038;wppf_branch=&#038;wppf_min_price=&#038;wppf_soldlet=default&#038;wppf_orderby=price-desc&#038;wppf_view=grid&#038;wppf_lat=&#038;wppf_lng=&#038;wppf_radius=Text+Match+Only+%28no+radius%29&#038;wppf_records=12" class="nav-link">Rent</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32050036 nav-item"><a title="Let" href="https://homesureproperty.co.uk/let-your-home/" class="nav-link">Let</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32050039 nav-item"><a title="Invest" href="https://homesureproperty.co.uk/investments/" class="nav-link">Invest</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52693714 nav-item"><a title="Block" href="https://homesureproperty.co.uk/block-management/" class="nav-link">Block</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32050037 nav-item"><a title="Auctions" href="http://auctions.homesureproperty.co.uk" class="nav-link">Auctions</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32050038 nav-item"><a title="Valuations" href="https://homesureproperty.co.uk/valuations/" class="nav-link">Valuations</a></li>
+</ul>							</div>
+			<div class="topbar--mobile">
+				
+				<ul id="menu-top-bar-left" class="topbar--mobile__nav"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14153 nav-item"><a title="Report a Repair" target="_blank" rel="noopener noreferrer" href="https://homesureproperty.propertyfile.co.uk/tenant" class="nav-link">Report a Repair</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40 nav-item"><a title="Landlord &amp; Tenant Portal" href="https://homesureproperty.co.uk/landlord-tenant-hub/" class="nav-link">Landlord &#038; Tenant Portal</a></li>
+</ul>				<ul id="menu-top-bar-right" class="topbar--mobile__nav"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-46 nav-item"><a title="Refer a Friend" href="https://homesureproperty.co.uk/refer-a-friend/" class="nav-link">Refer a Friend</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-47 nav-item"><a title="About Us" href="#" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-47">About Us</a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-47" >
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14143 nav-item"><a title="About us" href="https://homesureproperty.co.uk/about-us/" class="dropdown-item">About us</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3399 nav-item"><a title="Careers" href="https://homesureproperty.co.uk/careers/" class="dropdown-item">Careers</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3400 nav-item"><a title="Resources" href="https://homesureproperty.co.uk/resources/" class="dropdown-item">Resources</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-146335 nav-item"><a title="Frequently asked questions" href="https://homesureproperty.co.uk/frequently-asked-questions/" class="dropdown-item">Frequently asked questions</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45 nav-item"><a title="Latest news" href="https://homesureproperty.co.uk/latest-news/" class="dropdown-item">Latest news</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-146232 nav-item"><a title="Charity" href="https://homesureproperty.co.uk/charity/" class="dropdown-item">Charity</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-146374 nav-item"><a title="Applying for your new home" href="https://homesureproperty.co.uk/apply-for-your-new-home/" class="dropdown-item">Applying for your new home</a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44 nav-item"><a title="Contact" href="https://homesureproperty.co.uk/contact-us/" class="nav-link">Contact</a></li>
+</ul>			</div>
+		</div>
+	</div>
+
+
+<!-- <div class="container wppf_container clearfix"> -->
+
+        <div class="wppf_fullxx">
+            
+<div class="hero " style="background-color: rgba(35,43,53,0.9);" >
+
+            <div class="hero__bg" style="background: center / cover no-repeat url('https://homesureproperty.co.uk/wp-content/uploads/2022/03/search-hero-1.jpg');  mix-blend-mode: multiply;"></div>
+    
+    <div class="container">
+        <div class="row">
+
+                            <h1 class="hero__title">Find your perfect home</h1>
+                        <div class="col">
+                <div class="property-search wppf_search wppf_quicksearch">
+
+                    <form class="property-search__form form" action="https://homesureproperty.co.uk/property/" method="get">
+
+                        <div class="row g-4">
+                            <div class="col-lg-6">
+                                <label class="form-label">Location</label>
+                                <input name='wppf_location' placeholder='Enter location or postcode' type='text' class='wppf_location form-control' value='' autocomplete='nope' />                            </div>
+                        
+                            <div class="col-lg-5">
+                                <label class="form-label">Bedrooms</label>
+                                <div class="d-flex">
+                                    <select name='wppf_min_bedrooms' id='wppf_min_bedrooms_select' class='form-select'><option value=''>No min</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select>                                    <select name='wppf_max_bedrooms' id='wppf_max_bedrooms_select' class='form-select ms-2'><option value=''>No max</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select>                                </div>
+
+                            </div>
+
+                            <div class="col-lg-5">
+                                                                <div class="wppf_sale">
+                                    <label class="form-label">Price</label>
+                                    <div class="d-flex">
+                                        <select name='wppf_min_price' id='wppf_min_price_select' class='form-select'><option value=''>No min</option><option value='25000'>&pound;25,000</option><option value='50000'>&pound;50,000</option><option value='60000'>&pound;60,000</option><option value='70000'>&pound;70,000</option><option value='80000'>&pound;80,000</option><option value='90000'>&pound;90,000</option><option value='100000'>&pound;100,000</option><option value='110000'>&pound;110,000</option><option value='120000'>&pound;120,000</option><option value='125000'>&pound;125,000</option><option value='130000'>&pound;130,000</option><option value='140000'>&pound;140,000</option><option value='150000'>&pound;150,000</option><option value='160000'>&pound;160,000</option><option value='170000'>&pound;170,000</option><option value='175000'>&pound;175,000</option><option value='180000'>&pound;180,000</option><option value='190000'>&pound;190,000</option><option value='200000'>&pound;200,000</option><option value='210000'>&pound;210,000</option><option value='220000'>&pound;220,000</option><option value='230000'>&pound;230,000</option><option value='240000'>&pound;240,000</option><option value='250000'>&pound;250,000</option><option value='260000'>&pound;260,000</option><option value='270000'>&pound;270,000</option><option value='280000'>&pound;280,000</option><option value='290000'>&pound;290,000</option><option value='300000'>&pound;300,000</option><option value='325000'>&pound;325,000</option><option value='350000'>&pound;350,000</option><option value='375000'>&pound;375,000</option><option value='400000'>&pound;400,000</option><option value='425000'>&pound;425,000</option><option value='450000'>&pound;450,000</option><option value='475000'>&pound;475,000</option><option value='500000'>&pound;500,000</option><option value='550000'>&pound;550,000</option><option value='600000'>&pound;600,000</option><option value='650000'>&pound;650,000</option><option value='700000'>&pound;700,000</option><option value='800000'>&pound;800,000</option><option value='900000'>&pound;900,000</option><option value='1000000'>&pound;1,000,000</option><option value='1250000'>&pound;1,250,000</option><option value='1500000'>&pound;1,500,000</option><option value='1750000'>&pound;1,750,000</option><option value='2000000'>&pound;2,000,000</option><option value='2500000'>&pound;2,500,000</option><option value='3000000'>&pound;3,000,000</option><option value='4000000'>&pound;4,000,000</option><option value='5000000'>&pound;5,000,000</option><option value='7500000'>&pound;7,500,000</option><option value='10000000'>&pound;10,000,000</option><option value='15000000'>&pound;15,000,000</option><option value='20000000'>&pound;20,000,000</option></select>                                        <select name='wppf_max_price' id='wppf_max_price_select' class='form-select ms-2'><option value=''>No max</option><option value='25000'>&pound;25,000</option><option value='50000'>&pound;50,000</option><option value='60000'>&pound;60,000</option><option value='70000'>&pound;70,000</option><option value='80000'>&pound;80,000</option><option value='90000'>&pound;90,000</option><option value='100000'>&pound;100,000</option><option value='110000'>&pound;110,000</option><option value='120000'>&pound;120,000</option><option value='125000'>&pound;125,000</option><option value='130000'>&pound;130,000</option><option value='140000'>&pound;140,000</option><option value='150000'>&pound;150,000</option><option value='160000'>&pound;160,000</option><option value='170000'>&pound;170,000</option><option value='175000'>&pound;175,000</option><option value='180000'>&pound;180,000</option><option value='190000'>&pound;190,000</option><option value='200000'>&pound;200,000</option><option value='210000'>&pound;210,000</option><option value='220000'>&pound;220,000</option><option value='230000'>&pound;230,000</option><option value='240000'>&pound;240,000</option><option value='250000'>&pound;250,000</option><option value='260000'>&pound;260,000</option><option value='270000'>&pound;270,000</option><option value='280000'>&pound;280,000</option><option value='290000'>&pound;290,000</option><option value='300000'>&pound;300,000</option><option value='325000'>&pound;325,000</option><option value='350000'>&pound;350,000</option><option value='375000'>&pound;375,000</option><option value='400000'>&pound;400,000</option><option value='425000'>&pound;425,000</option><option value='450000'>&pound;450,000</option><option value='475000'>&pound;475,000</option><option value='500000'>&pound;500,000</option><option value='550000'>&pound;550,000</option><option value='600000'>&pound;600,000</option><option value='650000'>&pound;650,000</option><option value='700000'>&pound;700,000</option><option value='800000'>&pound;800,000</option><option value='900000'>&pound;900,000</option><option value='1000000'>&pound;1,000,000</option><option value='1250000'>&pound;1,250,000</option><option value='1500000'>&pound;1,500,000</option><option value='1750000'>&pound;1,750,000</option><option value='2000000'>&pound;2,000,000</option><option value='2500000'>&pound;2,500,000</option><option value='3000000'>&pound;3,000,000</option><option value='4000000'>&pound;4,000,000</option><option value='5000000'>&pound;5,000,000</option><option value='7500000'>&pound;7,500,000</option><option value='10000000'>&pound;10,000,000</option><option value='15000000'>&pound;15,000,000</option><option value='20000000'>&pound;20,000,000</option></select>                                    </div>
+                                </div>
+                                
+                                                            </div>
+                        </div>
+
+                        <div class="form__buttons">
+                                                        <div class="form-check wppf_sale">
+                                <label class="form-check-label">
+                                    <input type='checkbox' name='wppf_soldlet' value='hide' class='form-check-input'>                                    Exclude SSTC                                </label>
+                            </div>
+                                                        
+                            <input class="btn btn--primary btn--hero btn--lg" type="submit" value="Search Properties" />
+
+                            <input type='hidden' name='wppf_search' value='to-buy' /><input type='hidden' name='wppf_view' value='grid' /><input type='hidden' name='wppf_lat' value='0' /><input type='hidden' name='wppf_lng' value='0' /><input type='hidden' name='wppf_radius' value='Text Match Only (no radius)' /><input type='hidden' name='wppf_records' value='12' />
+                        </div>
+
+                    </form >
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+        </div>
+        <div class="wppf_fullxx">
+            
+
+<div class="property-results">
+
+    <div class="container">
+
+        
+        
+        <div class="row">
+
+            <div class="posts__header">
+
+                <div class="posts__message">
+                    <h2>Results</h2>
+                    <p>We've found 103 properties that meet your requirements</p>
+                </div>  
+
+                <div class="posts__filter">
+                    <form class="posts__filter__form">
+                        <div class="row g-3">
+                            <div class="col">
+                                <label class="form-label">Sort</label>
+                                <select name='wppf_orderby' class='wppf_orderby_select form-select'><option value='/property/?wppf_search=to-buy&#038;wppf_branch&#038;wppf_min_price&#038;wppf_soldlet=default&#038;wppf_orderby=price-desc&#038;wppf_view=grid&#038;wppf_lat&#038;wppf_lng&#038;wppf_radius=Text+Match+Only+%28no+radius%29&#038;wppf_records=12' selected='selected'>Price High to Low</option><option value='/property/?wppf_search=to-buy&#038;wppf_branch&#038;wppf_min_price&#038;wppf_soldlet=default&#038;wppf_orderby=price-asc&#038;wppf_view=grid&#038;wppf_lat&#038;wppf_lng&#038;wppf_radius=Text+Match+Only+%28no+radius%29&#038;wppf_records=12'>Price Low to High</option><option value='/property/?wppf_search=to-buy&#038;wppf_branch&#038;wppf_min_price&#038;wppf_soldlet=default&#038;wppf_orderby=latest&#038;wppf_view=grid&#038;wppf_lat&#038;wppf_lng&#038;wppf_radius=Text+Match+Only+%28no+radius%29&#038;wppf_records=12'>Most Recent</option></select>                            </div>
+                            <div class="col">
+                                <label class="form-label">Radius</label>
+                                <select name='wppf_radius' id='wppf_radius_select' class='form-select radius-select'><option value='1'>within 1 miles</option><option value='3'>within 3 miles</option><option value='5'>within 5 miles</option><option value='10'>within 10 miles</option><option value='15'>within 15 miles</option><option value='20'>within 20 miles</option><option value='30'>within 30 miles</option><option value='40'>within 40 miles</option><option value='50'>within 50 miles</option></select>                            </div>
+                        </div>
+                    </form>
+                </div>  
+
+            </div>
+
+        </div>
+ 
+        <div class="property-results__cards">
+
+            <div class="row row-cols-1 row-cols-md-2 g-3">
+
+            
+                <div class="col">
+                    <div class="property-card card">
+                        <figure class="property-card__figure">
+                            <a href="https://homesureproperty.co.uk/property/montclair-drive-liverpool-l18/">
+                                <img width="150" height="150" src="https://apollo.street.co.uk/street-live/tr:pr-true,n-property_feed_full/properties/general/30455316/montclairfront6.jpg" class="attachment-800x600 size-800x600 wp-post-image" alt="" decoding="async" />                                                                                            </a>
+                        </figure>
+
+                        <div class="property-card__photos dark-overlay">
+                            <i class="fal fa-camera-alt"></i> 
+                            33                                                                                        <div class="property-card__photos__tour">
+                                    <i class="fal fa-video"></i> 
+                                </div>
+                                                    </div>
+                                                <button class="property-card__wishlist btn--wishlist add-to-wishlist" data-propertyid="72209098">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <div class="property-card__summary dark-overlay">
+
+                            <div class="property-card__icons">
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-home-lg-alt"></i>
+                                    </div>  
+                                    <div class="property-card__icon__footer">
+                                        House                                    </div>
+                                </div>    
+                                
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-bed-alt"></i>
+                                        <span class="property-card__total">
+                                        4                                        </span>
+                                    </div>  
+                                    <div class="property-card__icon__footer">Bedrooms</div>
+                                </div> 
+
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-bath"></i>
+                                        <span class="property-card__total">
+                                        1                                        </span>
+                                    </div>  
+                                    <div class="property-card__icon__footer">Bathrooms</div>
+                                </div> 
+
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-loveseat"></i>
+                                        <span class="property-card__total">
+                                        3                                        </span>
+                                    </div>  
+                                    <div class="property-card__icon__footer">Reception</div>
+                                </div> 
+                            </div>
+
+                            <div class="property-card__price d-none d-lg-block">
+                                                                £795,000                                <span class="property-card__price__details text-uc"></span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="property-card__footer">
+                        Montclair Drive, Liverpool, L18                    </div>
+                    <div class="property-card__price d-lg-none">
+                                                £795,000                        <span class="property-card__price__details text-uc"></span>
+                    </div>
+                </div>
+
+                
+                
+            
+                <div class="col">
+                    <div class="property-card card">
+                        <figure class="property-card__figure">
+                            <a href="https://homesureproperty.co.uk/property/dark-lane-kingsley-wa6/">
+                                <img width="150" height="150" src="https://apollo.street.co.uk/street-live/tr:pr-true,n-property_feed_full/properties/general/29014729/darkdriveandlane2.jpg" class="attachment-800x600 size-800x600 wp-post-image" alt="" decoding="async" />                                                                                            </a>
+                        </figure>
+
+                        <div class="property-card__photos dark-overlay">
+                            <i class="fal fa-camera-alt"></i> 
+                            39                                                                                        <div class="property-card__photos__tour">
+                                    <i class="fal fa-video"></i> 
+                                </div>
+                                                    </div>
+                                                <button class="property-card__wishlist btn--wishlist add-to-wishlist" data-propertyid="72209008">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <div class="property-card__summary dark-overlay">
+
+                            <div class="property-card__icons">
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-home-lg-alt"></i>
+                                    </div>  
+                                    <div class="property-card__icon__footer">
+                                        House                                    </div>
+                                </div>    
+                                
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-bed-alt"></i>
+                                        <span class="property-card__total">
+                                        3                                        </span>
+                                    </div>  
+                                    <div class="property-card__icon__footer">Bedrooms</div>
+                                </div> 
+
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-bath"></i>
+                                        <span class="property-card__total">
+                                        1                                        </span>
+                                    </div>  
+                                    <div class="property-card__icon__footer">Bathrooms</div>
+                                </div> 
+
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-loveseat"></i>
+                                        <span class="property-card__total">
+                                        3                                        </span>
+                                    </div>  
+                                    <div class="property-card__icon__footer">Reception</div>
+                                </div> 
+                            </div>
+
+                            <div class="property-card__price d-none d-lg-block">
+                                                                £750,000                                <span class="property-card__price__details text-uc"></span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="property-card__footer">
+                        Dark Lane, Kingsley, WA6                    </div>
+                    <div class="property-card__price d-lg-none">
+                                                £750,000                        <span class="property-card__price__details text-uc"></span>
+                    </div>
+                </div>
+
+                
+                
+            
+                <div class="col">
+                    <div class="property-card card">
+                        <figure class="property-card__figure">
+                            <a href="https://homesureproperty.co.uk/property/willow-green-liverpool-l25/">
+                                <img width="150" height="150" src="https://apollo.street.co.uk/street-live/tr:pr-true,n-property_feed_full/properties/general/25718301/CAM03391G0-PR0247-STILL019.jpg" class="attachment-800x600 size-800x600 wp-post-image" alt="" decoding="async" />                                                                                                <figcaption class="Under Offer ribbon">
+                                    Under Offer                                </figcaption>
+                                                            </a>
+                        </figure>
+
+                        <div class="property-card__photos dark-overlay">
+                            <i class="fal fa-camera-alt"></i> 
+                            28                                                                                        <div class="property-card__photos__tour">
+                                    <i class="fal fa-video"></i> 
+                                </div>
+                                                    </div>
+                                                <button class="property-card__wishlist btn--wishlist add-to-wishlist" data-propertyid="72207581">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <div class="property-card__summary dark-overlay">
+
+                            <div class="property-card__icons">
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-home-lg-alt"></i>
+                                    </div>  
+                                    <div class="property-card__icon__footer">
+                                        House                                    </div>
+                                </div>    
+                                
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-bed-alt"></i>
+                                        <span class="property-card__total">
+                                        4                                        </span>
+                                    </div>  
+                                    <div class="property-card__icon__footer">Bedrooms</div>
+                                </div> 
+
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-bath"></i>
+                                        <span class="property-card__total">
+                                        3                                        </span>
+                                    </div>  
+                                    <div class="property-card__icon__footer">Bathrooms</div>
+                                </div> 
+
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-loveseat"></i>
+                                        <span class="property-card__total">
+                                        2                                        </span>
+                                    </div>  
+                                    <div class="property-card__icon__footer">Reception</div>
+                                </div> 
+                            </div>
+
+                            <div class="property-card__price d-none d-lg-block">
+                                                                £600,000                                <span class="property-card__price__details text-uc"></span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="property-card__footer">
+                        Willow Green, Liverpool, L25                    </div>
+                    <div class="property-card__price d-lg-none">
+                                                £600,000                        <span class="property-card__price__details text-uc"></span>
+                    </div>
+                </div>
+
+                
+                
+            
+                <div class="col">
+                    <div class="property-card card">
+                        <figure class="property-card__figure">
+                            <a href="https://homesureproperty.co.uk/property/quarry-street-liverpool-l25/">
+                                <img width="150" height="150" src="https://apollo.street.co.uk/street-live/tr:pr-true,n-property_feed_full/properties/general/25435383/CAM03391G0-PR0243-STILL0031.jpg" class="attachment-800x600 size-800x600 wp-post-image" alt="" decoding="async" />                                                                                                <figcaption class="Sold STC ribbon">
+                                    Sold STC                                </figcaption>
+                                                            </a>
+                        </figure>
+
+                        <div class="property-card__photos dark-overlay">
+                            <i class="fal fa-camera-alt"></i> 
+                            37                                                                                        <div class="property-card__photos__tour">
+                                    <i class="fal fa-video"></i> 
+                                </div>
+                                                    </div>
+                                                <button class="property-card__wishlist btn--wishlist add-to-wishlist" data-propertyid="72207985">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <div class="property-card__summary dark-overlay">
+
+                            <div class="property-card__icons">
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-home-lg-alt"></i>
+                                    </div>  
+                                    <div class="property-card__icon__footer">
+                                        House                                    </div>
+                                </div>    
+                                
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-bed-alt"></i>
+                                        <span class="property-card__total">
+                                        5                                        </span>
+                                    </div>  
+                                    <div class="property-card__icon__footer">Bedrooms</div>
+                                </div> 
+
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-bath"></i>
+                                        <span class="property-card__total">
+                                        3                                        </span>
+                                    </div>  
+                                    <div class="property-card__icon__footer">Bathrooms</div>
+                                </div> 
+
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-loveseat"></i>
+                                        <span class="property-card__total">
+                                        2                                        </span>
+                                    </div>  
+                                    <div class="property-card__icon__footer">Reception</div>
+                                </div> 
+                            </div>
+
+                            <div class="property-card__price d-none d-lg-block">
+                                                                £569,950                                <span class="property-card__price__details text-uc"></span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="property-card__footer">
+                        Quarry Street, Liverpool, L25                    </div>
+                    <div class="property-card__price d-lg-none">
+                                                £569,950                        <span class="property-card__price__details text-uc"></span>
+                    </div>
+                </div>
+
+                                </div><!-- row -->
+                <div class="inline-cta">
+                                                                    <a href="http://valuation.homesureproperty.co.uk/" class="inline-cta__link" target="_blank">Looking to sell? Get your property valued instantly</a>
+                                    </div>
+                <div class="row row-cols-1 row-cols-md-2 g-3">
+                
+                
+            
+                <div class="col">
+                    <div class="property-card card">
+                        <figure class="property-card__figure">
+                            <a href="https://homesureproperty.co.uk/property/huyton-hey-road-liverpool-l36/">
+                                <img width="150" height="150" src="https://apollo.street.co.uk/street-live/tr:pr-true,n-property_feed_full/properties/general/18429934/CAM03391G0-PR0162-STILL044.jpg" class="attachment-800x600 size-800x600 wp-post-image" alt="" decoding="async" />                                                                                                <figcaption class="Sold STC ribbon">
+                                    Sold STC                                </figcaption>
+                                                            </a>
+                        </figure>
+
+                        <div class="property-card__photos dark-overlay">
+                            <i class="fal fa-camera-alt"></i> 
+                            36                                                                                        <div class="property-card__photos__tour">
+                                    <i class="fal fa-video"></i> 
+                                </div>
+                                                    </div>
+                                                <button class="property-card__wishlist btn--wishlist add-to-wishlist" data-propertyid="72207713">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <div class="property-card__summary dark-overlay">
+
+                            <div class="property-card__icons">
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-home-lg-alt"></i>
+                                    </div>  
+                                    <div class="property-card__icon__footer">
+                                        House                                    </div>
+                                </div>    
+                                
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-bed-alt"></i>
+                                        <span class="property-card__total">
+                                        5                                        </span>
+                                    </div>  
+                                    <div class="property-card__icon__footer">Bedrooms</div>
+                                </div> 
+
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-bath"></i>
+                                        <span class="property-card__total">
+                                        1                                        </span>
+                                    </div>  
+                                    <div class="property-card__icon__footer">Bathrooms</div>
+                                </div> 
+
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-loveseat"></i>
+                                        <span class="property-card__total">
+                                        2                                        </span>
+                                    </div>  
+                                    <div class="property-card__icon__footer">Reception</div>
+                                </div> 
+                            </div>
+
+                            <div class="property-card__price d-none d-lg-block">
+                                                                £500,000                                <span class="property-card__price__details text-uc"></span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="property-card__footer">
+                        Huyton Hey Road, Liverpool, L36                    </div>
+                    <div class="property-card__price d-lg-none">
+                                                £500,000                        <span class="property-card__price__details text-uc"></span>
+                    </div>
+                </div>
+
+                
+                
+            
+                <div class="col">
+                    <div class="property-card card">
+                        <figure class="property-card__figure">
+                            <a href="https://homesureproperty.co.uk/property/hightor-road-liverpool-l25/">
+                                <img width="150" height="150" src="https://apollo.street.co.uk/street-live/tr:pr-true,n-property_feed_full/properties/general/30756481/CAM03391G0-PR0300-STILL033.jpg" class="attachment-800x600 size-800x600 wp-post-image" alt="" decoding="async" />                                                                                            </a>
+                        </figure>
+
+                        <div class="property-card__photos dark-overlay">
+                            <i class="fal fa-camera-alt"></i> 
+                            35                                                                                        <div class="property-card__photos__tour">
+                                    <i class="fal fa-video"></i> 
+                                </div>
+                                                    </div>
+                                                <button class="property-card__wishlist btn--wishlist add-to-wishlist" data-propertyid="72209249">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <div class="property-card__summary dark-overlay">
+
+                            <div class="property-card__icons">
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-home-lg-alt"></i>
+                                    </div>  
+                                    <div class="property-card__icon__footer">
+                                        House                                    </div>
+                                </div>    
+                                
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-bed-alt"></i>
+                                        <span class="property-card__total">
+                                        4                                        </span>
+                                    </div>  
+                                    <div class="property-card__icon__footer">Bedrooms</div>
+                                </div> 
+
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-bath"></i>
+                                        <span class="property-card__total">
+                                        3                                        </span>
+                                    </div>  
+                                    <div class="property-card__icon__footer">Bathrooms</div>
+                                </div> 
+
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-loveseat"></i>
+                                        <span class="property-card__total">
+                                        2                                        </span>
+                                    </div>  
+                                    <div class="property-card__icon__footer">Reception</div>
+                                </div> 
+                            </div>
+
+                            <div class="property-card__price d-none d-lg-block">
+                                                                £450,000                                <span class="property-card__price__details text-uc"></span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="property-card__footer">
+                        Hightor Road, Liverpool, L25                    </div>
+                    <div class="property-card__price d-lg-none">
+                                                £450,000                        <span class="property-card__price__details text-uc"></span>
+                    </div>
+                </div>
+
+                
+                
+            
+                <div class="col">
+                    <div class="property-card card">
+                        <figure class="property-card__figure">
+                            <a href="https://homesureproperty.co.uk/property/churchward-court-woolton-l25/">
+                                <img width="150" height="150" src="https://apollo.street.co.uk/street-live/tr:pr-true,n-property_feed_full/properties/general/26700704/CAM03391G0-PR0255-STILL010.jpg" class="attachment-800x600 size-800x600 wp-post-image" alt="" decoding="async" />                                                                                            </a>
+                        </figure>
+
+                        <div class="property-card__photos dark-overlay">
+                            <i class="fal fa-camera-alt"></i> 
+                            19                                                                                        <div class="property-card__photos__tour">
+                                    <i class="fal fa-video"></i> 
+                                </div>
+                                                    </div>
+                                                <button class="property-card__wishlist btn--wishlist add-to-wishlist" data-propertyid="72208426">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <div class="property-card__summary dark-overlay">
+
+                            <div class="property-card__icons">
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-home-lg-alt"></i>
+                                    </div>  
+                                    <div class="property-card__icon__footer">
+                                        House                                    </div>
+                                </div>    
+                                
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-bed-alt"></i>
+                                        <span class="property-card__total">
+                                        3                                        </span>
+                                    </div>  
+                                    <div class="property-card__icon__footer">Bedrooms</div>
+                                </div> 
+
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-bath"></i>
+                                        <span class="property-card__total">
+                                        2                                        </span>
+                                    </div>  
+                                    <div class="property-card__icon__footer">Bathrooms</div>
+                                </div> 
+
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-loveseat"></i>
+                                        <span class="property-card__total">
+                                        1                                        </span>
+                                    </div>  
+                                    <div class="property-card__icon__footer">Reception</div>
+                                </div> 
+                            </div>
+
+                            <div class="property-card__price d-none d-lg-block">
+                                                                £399,950                                <span class="property-card__price__details text-uc"></span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="property-card__footer">
+                        Churchward Court, Woolton, L25                    </div>
+                    <div class="property-card__price d-lg-none">
+                                                £399,950                        <span class="property-card__price__details text-uc"></span>
+                    </div>
+                </div>
+
+                
+                
+            
+                <div class="col">
+                    <div class="property-card card">
+                        <figure class="property-card__figure">
+                            <a href="https://homesureproperty.co.uk/property/south-highville-road-liverpool-l16/">
+                                <img width="150" height="150" src="https://apollo.street.co.uk/street-live/tr:pr-true,n-property_feed_full/properties/general/28146222/CAM03391G0-PR0269-STILL011.jpg" class="attachment-800x600 size-800x600 wp-post-image" alt="" decoding="async" />                                                                                            </a>
+                        </figure>
+
+                        <div class="property-card__photos dark-overlay">
+                            <i class="fal fa-camera-alt"></i> 
+                            25                                                                                </div>
+                                                <button class="property-card__wishlist btn--wishlist add-to-wishlist" data-propertyid="72208588">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <div class="property-card__summary dark-overlay">
+
+                            <div class="property-card__icons">
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-home-lg-alt"></i>
+                                    </div>  
+                                    <div class="property-card__icon__footer">
+                                        House                                    </div>
+                                </div>    
+                                
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-bed-alt"></i>
+                                        <span class="property-card__total">
+                                        3                                        </span>
+                                    </div>  
+                                    <div class="property-card__icon__footer">Bedrooms</div>
+                                </div> 
+
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-bath"></i>
+                                        <span class="property-card__total">
+                                        1                                        </span>
+                                    </div>  
+                                    <div class="property-card__icon__footer">Bathrooms</div>
+                                </div> 
+
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-loveseat"></i>
+                                        <span class="property-card__total">
+                                        1                                        </span>
+                                    </div>  
+                                    <div class="property-card__icon__footer">Reception</div>
+                                </div> 
+                            </div>
+
+                            <div class="property-card__price d-none d-lg-block">
+                                                                £395,000                                <span class="property-card__price__details text-uc"></span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="property-card__footer">
+                        South Highville Road, Liverpool, L16                    </div>
+                    <div class="property-card__price d-lg-none">
+                                                £395,000                        <span class="property-card__price__details text-uc"></span>
+                    </div>
+                </div>
+
+                
+                
+            
+                <div class="col">
+                    <div class="property-card card">
+                        <figure class="property-card__figure">
+                            <a href="https://homesureproperty.co.uk/property/carkington-road-liverpool-l25/">
+                                <img width="150" height="150" src="https://apollo.street.co.uk/street-live/tr:pr-true,n-property_feed_full/properties/general/31764607/CAM03391G0-PR0310-STILL032.jpg" class="attachment-800x600 size-800x600 wp-post-image" alt="" decoding="async" />                                                                                            </a>
+                        </figure>
+
+                        <div class="property-card__photos dark-overlay">
+                            <i class="fal fa-camera-alt"></i> 
+                            32                                                                                        <div class="property-card__photos__tour">
+                                    <i class="fal fa-video"></i> 
+                                </div>
+                                                    </div>
+                                                <button class="property-card__wishlist btn--wishlist add-to-wishlist" data-propertyid="72209356">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <div class="property-card__summary dark-overlay">
+
+                            <div class="property-card__icons">
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-home-lg-alt"></i>
+                                    </div>  
+                                    <div class="property-card__icon__footer">
+                                        House                                    </div>
+                                </div>    
+                                
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-bed-alt"></i>
+                                        <span class="property-card__total">
+                                        4                                        </span>
+                                    </div>  
+                                    <div class="property-card__icon__footer">Bedrooms</div>
+                                </div> 
+
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-bath"></i>
+                                        <span class="property-card__total">
+                                        1                                        </span>
+                                    </div>  
+                                    <div class="property-card__icon__footer">Bathrooms</div>
+                                </div> 
+
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-loveseat"></i>
+                                        <span class="property-card__total">
+                                        1                                        </span>
+                                    </div>  
+                                    <div class="property-card__icon__footer">Reception</div>
+                                </div> 
+                            </div>
+
+                            <div class="property-card__price d-none d-lg-block">
+                                                                £375,000                                <span class="property-card__price__details text-uc"></span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="property-card__footer">
+                        Carkington Road, Liverpool, L25                    </div>
+                    <div class="property-card__price d-lg-none">
+                                                £375,000                        <span class="property-card__price__details text-uc"></span>
+                    </div>
+                </div>
+
+                
+                
+            
+                <div class="col">
+                    <div class="property-card card">
+                        <figure class="property-card__figure">
+                            <a href="https://homesureproperty.co.uk/property/kingsmead-drive-liverpool-l25/">
+                                <img width="150" height="150" src="https://apollo.street.co.uk/street-live/tr:pr-true,n-property_feed_full/properties/general/30546011/ea38ba0c-66ea-4a49-848a-f79c5c9a5cc4.jpg" class="attachment-800x600 size-800x600 wp-post-image" alt="" decoding="async" />                                                                                            </a>
+                        </figure>
+
+                        <div class="property-card__photos dark-overlay">
+                            <i class="fal fa-camera-alt"></i> 
+                            28                                                                                        <div class="property-card__photos__tour">
+                                    <i class="fal fa-video"></i> 
+                                </div>
+                                                    </div>
+                                                <button class="property-card__wishlist btn--wishlist add-to-wishlist" data-propertyid="72209154">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <div class="property-card__summary dark-overlay">
+
+                            <div class="property-card__icons">
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-home-lg-alt"></i>
+                                    </div>  
+                                    <div class="property-card__icon__footer">
+                                        House                                    </div>
+                                </div>    
+                                
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-bed-alt"></i>
+                                        <span class="property-card__total">
+                                        3                                        </span>
+                                    </div>  
+                                    <div class="property-card__icon__footer">Bedrooms</div>
+                                </div> 
+
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-bath"></i>
+                                        <span class="property-card__total">
+                                        1                                        </span>
+                                    </div>  
+                                    <div class="property-card__icon__footer">Bathrooms</div>
+                                </div> 
+
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-loveseat"></i>
+                                        <span class="property-card__total">
+                                        2                                        </span>
+                                    </div>  
+                                    <div class="property-card__icon__footer">Reception</div>
+                                </div> 
+                            </div>
+
+                            <div class="property-card__price d-none d-lg-block">
+                                                                £375,000                                <span class="property-card__price__details text-uc"></span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="property-card__footer">
+                        Kingsmead Drive, Liverpool, L25                    </div>
+                    <div class="property-card__price d-lg-none">
+                                                £375,000                        <span class="property-card__price__details text-uc"></span>
+                    </div>
+                </div>
+
+                
+                
+            
+                <div class="col">
+                    <div class="property-card card">
+                        <figure class="property-card__figure">
+                            <a href="https://homesureproperty.co.uk/property/farnborough-grove-liverpool-l26/">
+                                <img width="150" height="150" src="https://apollo.street.co.uk/street-live/tr:pr-true,n-property_feed_full/properties/general/18321249/CAM03391G0-PR0160-STILL029.jpg" class="attachment-800x600 size-800x600 wp-post-image" alt="" decoding="async" />                                                                                            </a>
+                        </figure>
+
+                        <div class="property-card__photos dark-overlay">
+                            <i class="fal fa-camera-alt"></i> 
+                            29                                                                                        <div class="property-card__photos__tour">
+                                    <i class="fal fa-video"></i> 
+                                </div>
+                                                    </div>
+                                                <button class="property-card__wishlist btn--wishlist add-to-wishlist" data-propertyid="72207654">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <div class="property-card__summary dark-overlay">
+
+                            <div class="property-card__icons">
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-home-lg-alt"></i>
+                                    </div>  
+                                    <div class="property-card__icon__footer">
+                                        House                                    </div>
+                                </div>    
+                                
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-bed-alt"></i>
+                                        <span class="property-card__total">
+                                        4                                        </span>
+                                    </div>  
+                                    <div class="property-card__icon__footer">Bedrooms</div>
+                                </div> 
+
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-bath"></i>
+                                        <span class="property-card__total">
+                                        2                                        </span>
+                                    </div>  
+                                    <div class="property-card__icon__footer">Bathrooms</div>
+                                </div> 
+
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-loveseat"></i>
+                                        <span class="property-card__total">
+                                        2                                        </span>
+                                    </div>  
+                                    <div class="property-card__icon__footer">Reception</div>
+                                </div> 
+                            </div>
+
+                            <div class="property-card__price d-none d-lg-block">
+                                                                £375,000                                <span class="property-card__price__details text-uc"></span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="property-card__footer">
+                        Farnborough Grove, Liverpool, L26                    </div>
+                    <div class="property-card__price d-lg-none">
+                                                £375,000                        <span class="property-card__price__details text-uc"></span>
+                    </div>
+                </div>
+
+                
+                
+            
+                <div class="col">
+                    <div class="property-card card">
+                        <figure class="property-card__figure">
+                            <a href="https://homesureproperty.co.uk/property/felltor-close-liverpool-l25/">
+                                <img width="150" height="150" src="https://apollo.street.co.uk/street-live/tr:pr-true,n-property_feed_full/properties/general/23318082/d5f800c4-54b8-4e28-bb1c-026b77d343e7.jpg" class="attachment-800x600 size-800x600 wp-post-image" alt="" decoding="async" />                                                                                                <figcaption class="Sold STC ribbon">
+                                    Sold STC                                </figcaption>
+                                                            </a>
+                        </figure>
+
+                        <div class="property-card__photos dark-overlay">
+                            <i class="fal fa-camera-alt"></i> 
+                            33                                                                                        <div class="property-card__photos__tour">
+                                    <i class="fal fa-video"></i> 
+                                </div>
+                                                    </div>
+                                                <button class="property-card__wishlist btn--wishlist add-to-wishlist" data-propertyid="72207917">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <div class="property-card__summary dark-overlay">
+
+                            <div class="property-card__icons">
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-home-lg-alt"></i>
+                                    </div>  
+                                    <div class="property-card__icon__footer">
+                                        House                                    </div>
+                                </div>    
+                                
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-bed-alt"></i>
+                                        <span class="property-card__total">
+                                        3                                        </span>
+                                    </div>  
+                                    <div class="property-card__icon__footer">Bedrooms</div>
+                                </div> 
+
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-bath"></i>
+                                        <span class="property-card__total">
+                                        2                                        </span>
+                                    </div>  
+                                    <div class="property-card__icon__footer">Bathrooms</div>
+                                </div> 
+
+                                <div class="property-card__icon">
+                                    <div class="property-card__icon__body">
+                                        <i class="fal fa-loveseat"></i>
+                                        <span class="property-card__total">
+                                        2                                        </span>
+                                    </div>  
+                                    <div class="property-card__icon__footer">Reception</div>
+                                </div> 
+                            </div>
+
+                            <div class="property-card__price d-none d-lg-block">
+                                                                £375,000                                <span class="property-card__price__details text-uc"></span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="property-card__footer">
+                        Felltor Close, Liverpool, L25                    </div>
+                    <div class="property-card__price d-lg-none">
+                                                £375,000                        <span class="property-card__price__details text-uc"></span>
+                    </div>
+                </div>
+
+                
+                
+            
+            </div>
+
+        </div>
+
+        
+    </div>
+    
+	<nav class="navigation pagination" aria-label="&nbsp;">
+		<h2 class="screen-reader-text">&nbsp;</h2>
+		<div class="nav-links"><span aria-current="page" class="page-numbers current">1</span>
+<a class="page-numbers" href="https://homesureproperty.co.uk/property/page/2/?wppf_search=to-buy&#038;wppf_branch&#038;wppf_min_price&#038;wppf_soldlet=default&#038;wppf_orderby=price-desc&#038;wppf_view=grid&#038;wppf_lat&#038;wppf_lng&#038;wppf_radius=Text+Match+Only+%28no+radius%29&#038;wppf_records=12">2</a>
+<a class="page-numbers" href="https://homesureproperty.co.uk/property/page/3/?wppf_search=to-buy&#038;wppf_branch&#038;wppf_min_price&#038;wppf_soldlet=default&#038;wppf_orderby=price-desc&#038;wppf_view=grid&#038;wppf_lat&#038;wppf_lng&#038;wppf_radius=Text+Match+Only+%28no+radius%29&#038;wppf_records=12">3</a>
+<a class="page-numbers" href="https://homesureproperty.co.uk/property/page/4/?wppf_search=to-buy&#038;wppf_branch&#038;wppf_min_price&#038;wppf_soldlet=default&#038;wppf_orderby=price-desc&#038;wppf_view=grid&#038;wppf_lat&#038;wppf_lng&#038;wppf_radius=Text+Match+Only+%28no+radius%29&#038;wppf_records=12">4</a>
+<span class="page-numbers dots">&hellip;</span>
+<a class="page-numbers" href="https://homesureproperty.co.uk/property/page/9/?wppf_search=to-buy&#038;wppf_branch&#038;wppf_min_price&#038;wppf_soldlet=default&#038;wppf_orderby=price-desc&#038;wppf_view=grid&#038;wppf_lat&#038;wppf_lng&#038;wppf_radius=Text+Match+Only+%28no+radius%29&#038;wppf_records=12">9</a>
+<a class="next page-numbers" href="https://homesureproperty.co.uk/property/page/2/?wppf_search=to-buy&#038;wppf_branch&#038;wppf_min_price&#038;wppf_soldlet=default&#038;wppf_orderby=price-desc&#038;wppf_view=grid&#038;wppf_lat&#038;wppf_lng&#038;wppf_radius=Text+Match+Only+%28no+radius%29&#038;wppf_records=12">Next</a></div>
+	</nav></div>
+
+
+
+
+<div class="large-cta" style="background-color: rgba(35,43,53,0.9);" >
+
+            <div class="large-cta__bg" style="background: center / cover no-repeat linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://homesureproperty.co.uk/wp-content/uploads/2022/03/cta-book-a-valutation-1.jpg');"></div>
+    
+    <div class="container">
+        <div class="row">
+                            <h1 class="large-cta__title" data-aos="zoom-in">Book an instant valuation</h1>
+            
+            
+                            <div class="large-cta__button" data-aos="zoom-in">
+                                                                                        <a href="http://valuation.homesureproperty.co.uk/" class="btn btn--primary btn--lg" target="_blank">Get started</a>
+                                    </div>
+                    </div>
+    </div>
+</div>        </div>
+        <!-- </div> -->
+
+	<div class="page-footer">
+
+		<div class="container">
+
+			<div class="row justify-content-center justify-content-md-start justify-content-lg-center">
+				<div class="col-xl-4 col-lg-5" data-aos="zoom-in-up" data-aos-delay="0">
+
+					<h3 class="page-footer__title">Get in touch</h3>
+
+					<div class="footer__address__wrap">
+						<address class="footer__address">
+							<div class="company-name"><strong>Homesure Woolton</strong></div>
+							32 Allerton Road<br />
+Woolton Village<br />
+Liverpool<br />
+L25 7RG							<div class="footer__contact">
+								<a href="tel:0151 722 22 22" class="footer__phone">0151 722 22 22</a>
+							</div>
+						</address>
+
+						<address class="footer__address">
+							<div class="company-name"><strong>Homesure Prescot</strong></div>
+							16 Leyland Street <br />
+Prescot Village<br />
+L34 5QP							<div class="footer__contact">
+								<a href="tel:0151 289 55 41" class="footer__phone">0151 289 55 41</a>
+							</div>
+						</address>
+					</div>
+
+				</div>
+
+				<div class="col-xl-4 col-lg-5 col-md-6" data-aos="zoom-in-up" data-aos-delay="100">
+
+					<h3 class="page-footer__title">I’d like to</h3>
+
+					<div class="menu-footer-container"><ul id="menu-footer" class="menu menu--footer"><li id="menu-item-105" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-105"><a href="https://homesureproperty.co.uk/valuations/">Get a Valuation</a></li>
+<li id="menu-item-27992322" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-27992322"><a href="https://homesureproperty.co.uk/property/?wppf_search=to-buy&#038;wppf_branch=&#038;wppf_min_price=&#038;wppf_soldlet=default&#038;wppf_orderby=price-desc&#038;wppf_view=grid&#038;wppf_lat=&#038;wppf_lng=&#038;wppf_radius=Text+Match+Only+%28no+radius%29&#038;wppf_records=12" aria-current="page">Buy a Property</a></li>
+<li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108"><a href="https://homesureproperty.co.uk/sell-your-home/">Sell a Property</a></li>
+<li id="menu-item-146633" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-146633"><a href="https://homesureproperty.co.uk/property/?wppf_search=to-rent&#038;wppf_branch=&#038;wppf_min_price=&#038;wppf_soldlet=default&#038;wppf_orderby=latest&#038;wppf_view=grid&#038;wppf_lat=&#038;wppf_lng=&#038;wppf_radius=Text+Match+Only+%28no+radius%29&#038;wppf_records=12">Rent a Property</a></li>
+<li id="menu-item-106" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-106"><a href="https://homesureproperty.co.uk/let-your-home/">Let a Property</a></li>
+<li id="menu-item-104" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104"><a href="https://homesureproperty.co.uk/investments/">Invest in Property</a></li>
+</ul></div>				</div>
+
+				<div class="col-xl-4 col-lg-5 col-md-6" data-aos="zoom-in-up" data-aos-delay="200">
+
+					<h3 class="page-footer__title">Connect with us</h3>
+
+					<ul class="menu menu--social menu--footer">
+													<li><a href="https://www.facebook.com/homesureproperty/" target="_blank">
+								<i class="fab fa-facebook-square"></i>								Like us on Facebook								</a>
+							</li>
+													<li><a href="https://www.instagram.com/homesureproperty/" target="_blank">
+								<i class="fab fa-instagram-square"></i>								Follow us on Instagram								</a>
+							</li>
+													<li><a href="https://mobile.twitter.com/HomesureProp/" target="_blank">
+								<i class="fab fa-twitter-square"></i>								Follow us on Twitter								</a>
+							</li>
+													<li><a href="https://www.linkedin.com/company/homesure-property/" target="_blank">
+								<i class="fab fa-linkedin"></i>								Connect on LinkedIn								</a>
+							</li>
+													<li><a href="https://www.youtube.com/channel/UC9IAXUh4sOAcXMvHB8lfWYg" target="_blank">
+								<i class="fab fa-youtube-square"></i>								Subscribe on YouTube								</a>
+							</li>
+						             
+					</ul>
+				</div>
+			</div>
+
+			<div class="page-footer__logos">
+													<div class="page-footer__logo" data-aos="zoom-in" data-aos-delay="0" >
+						<img src="https://homesureproperty.co.uk/wp-content/uploads/2022/01/prime_location.svg" class="page-footer__logo__img" />
+					</div>
+									<div class="page-footer__logo" data-aos="zoom-in" data-aos-delay="50" >
+						<img src="https://homesureproperty.co.uk/wp-content/uploads/2022/01/zoopla.svg" class="page-footer__logo__img" />
+					</div>
+									<div class="page-footer__logo" data-aos="zoom-in" data-aos-delay="100" >
+						<img src="https://homesureproperty.co.uk/wp-content/uploads/2022/01/rightmove.svg" class="page-footer__logo__img" />
+					</div>
+									<div class="page-footer__logo" data-aos="zoom-in" data-aos-delay="150" >
+						<img src="https://homesureproperty.co.uk/wp-content/uploads/2022/01/the_property_ombudsman.svg" class="page-footer__logo__img" />
+					</div>
+									<div class="page-footer__logo" data-aos="zoom-in" data-aos-delay="200" >
+						<img src="https://homesureproperty.co.uk/wp-content/uploads/2022/01/approved_codes.svg" class="page-footer__logo__img" />
+					</div>
+									<div class="page-footer__logo" data-aos="zoom-in" data-aos-delay="250" >
+						<img src="https://homesureproperty.co.uk/wp-content/uploads/2022/01/safeagent.svg" class="page-footer__logo__img" />
+					</div>
+							</div>
+
+		</div>
+
+		<div class="page-footer__footer">
+			<div class="container">
+				<div class="row align-items-start">
+					<div class="col-lg-10 col-md-10">
+						<div class="page-footer__copyright">
+							© Homesure (UK) Ltd trading as Homesure Property, 2025. Company no. 06194846. All rights reserved.						</div>
+						<div class="menu-legal-container"><ul id="menu-legal" class="menu--legal"><li id="menu-item-82" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-82"><a rel="privacy-policy" href="https://homesureproperty.co.uk/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-14184" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14184"><a href="https://homesureproperty.co.uk/web-usage-policy/">Web Usage Policy</a></li>
+<li id="menu-item-19185963" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19185963"><a href="https://homesureproperty.co.uk/customer-complaints-handling-procedure/">Customer Complaints Handling Procedure</a></li>
+<li id="menu-item-62313863" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-62313863"><a href="https://homesureproperty.co.uk/legal-resources/">Legal Resources</a></li>
+</ul></div>					</div>
+					<div class="col-lg-6 col-md-6">
+						<div class="page-footer__credit">
+							<a href="https://kootoo.co.uk/" target="_blank">
+								<img src="https://homesureproperty.co.uk/wp-content/uploads/2022/01/kootoo.svg" class="page-footer__credit__img" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!-- #page we need this extra closing tag here -->
+
+
+<div class="modal fade valuation-modal" id="valuation-form-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="valuation-form-modal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="valuation-modal__container">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="exampleModalLabel">Request a free valuation</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-container">
+                        
+                <div class='gf_browser_chrome gform_wrapper gravity-theme gform-theme--no-framework' data-form-theme='gravity-theme' data-form-index='0' id='gform_wrapper_3' ><div id='gf_3' class='gform_anchor' tabindex='-1'></div><form method='post' enctype='multipart/form-data' target='gform_ajax_frame_3' id='gform_3'  action='/property/?wppf_search=to-buy&#038;wppf_branch&#038;wppf_min_price&#038;wppf_soldlet=default&#038;wppf_orderby=price-desc&#038;wppf_view=grid&#038;wppf_lat&#038;wppf_lng&#038;wppf_radius=Text+Match+Only+%28no+radius%29&#038;wppf_records=12#gf_3' data-formid='3' novalidate>
+                        <div class='gform-body gform_body'><div id='gform_fields_3' class='gform_fields top_label form_sublabel_below description_below validation_below'><div id="field_3_1" class="gfield gfield--type-text gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_3_1'>Name<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></label><div class='ginput_container ginput_container_text'><input name='input_1' id='input_3_1' type='text' value='' class='large'     aria-required="true" aria-invalid="false"   /></div></div><div id="field_3_2" class="gfield gfield--type-email gfield--width-full gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_3_2'>Email<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></label><div class='ginput_container ginput_container_email'>
+                            <input name='input_2' id='input_3_2' type='email' value='' class='large'    aria-required="true" aria-invalid="false"  />
+                        </div></div><div id="field_3_3" class="gfield gfield--type-text gfield--width-full gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_3_3'>Telephone<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></label><div class='ginput_container ginput_container_text'><input name='input_3' id='input_3_3' type='text' value='' class='large'     aria-required="true" aria-invalid="false"   /></div></div><div id="field_3_4" class="gfield gfield--type-text gfield--width-full form-50 gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_3_4'>Property name/number<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></label><div class='ginput_container ginput_container_text'><input name='input_4' id='input_3_4' type='text' value='' class='small'     aria-required="true" aria-invalid="false"   /></div></div><div id="field_3_5" class="gfield gfield--type-text gfield--width-full form-50 gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_3_5'>Postcode<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></label><div class='ginput_container ginput_container_text'><input name='input_5' id='input_3_5' type='text' value='' class='small'     aria-required="true" aria-invalid="false"   /></div></div><div id="field_3_6" class="gfield gfield--type-select gfield--width-full gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_3_6'>Why do you need a valuation?<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></label><div class='ginput_container ginput_container_select'><select name='input_6' id='input_3_6' class='large gfield_select'    aria-required="true" aria-invalid="false" ><option value='Looking to sell' >Looking to sell</option><option value='Looking to rent out' >Looking to rent out</option><option value='For mortgage purposes' >For mortgage purposes</option><option value='For insurance purposes' >For insurance purposes</option><option value='For probate purposes' >For probate purposes</option></select></div></div><div id="field_3_7" class="gfield gfield--type-textarea gfield--width-full field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_3_7'>Further information</label><div class='ginput_container ginput_container_textarea'><textarea name='input_7' id='input_3_7' class='textarea large'      aria-invalid="false"   rows='5' cols='50'></textarea></div></div><div id="field_3_8" class="gfield gfield--type-honeypot gform_validation_container field_sublabel_below gfield--has-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_3_8'>Comments</label><div class='ginput_container'><input name='input_8' id='input_3_8' type='text' value='' autocomplete='new-password'/></div><div class='gfield_description' id='gfield_description_3_8'>This field is for validation purposes and should be left unchanged.</div></div></div></div>
+        <div class='gform-footer gform_footer top_label'> <input type='submit' id='gform_submit_button_3' class='gform_button button' onclick='gform.submission.handleButtonClick(this);' data-submission-type='submit' value='Send'  /> <input type='hidden' name='gform_ajax' value='form_id=3&amp;title=&amp;description=&amp;tabindex=0&amp;theme=gravity-theme&amp;styles=[]&amp;hash=e2ff8c0ecdb7298c389641855fb7285e' />
+            <input type='hidden' class='gform_hidden' name='gform_submission_method' data-js='gform_submission_method_3' value='iframe' />
+            <input type='hidden' class='gform_hidden' name='gform_theme' data-js='gform_theme_3' id='gform_theme_3' value='gravity-theme' />
+            <input type='hidden' class='gform_hidden' name='gform_style_settings' data-js='gform_style_settings_3' id='gform_style_settings_3' value='[]' />
+            <input type='hidden' class='gform_hidden' name='is_submit_3' value='1' />
+            <input type='hidden' class='gform_hidden' name='gform_submit' value='3' />
+            
+            <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+            <input type='hidden' class='gform_hidden' name='state_3' value='WyJbXSIsImZhZjBjMjNhMjMxZTkyZjBkODk2NWEwOTNkY2IyOGVkIl0=' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_target_page_number_3' id='gform_target_page_number_3' value='0' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_source_page_number_3' id='gform_source_page_number_3' value='1' />
+            <input type='hidden' name='gform_field_values' value='' />
+            
+        </div>
+                        </form>
+                        </div>
+		                <iframe style='display:none;width:0px;height:0px;' src='about:blank' name='gform_ajax_frame_3' id='gform_ajax_frame_3' title='This iframe contains the logic required to handle Ajax powered Gravity Forms.'></iframe>
+		                <script>
+gform.initializeOnLoaded( function() {gformInitSpinner( 3, 'https://homesureproperty.co.uk/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery('#gform_ajax_frame_3').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_3');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_3').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;var mt = parseInt(jQuery('html').css('margin-top'), 10) + parseInt(jQuery('body').css('margin-top'), 10) + 100;if(is_form){jQuery('#gform_wrapper_3').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_3').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_3').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */ jQuery(document).scrollTop(jQuery('#gform_wrapper_3').offset().top - mt); }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_3').val();gformInitSpinner( 3, 'https://homesureproperty.co.uk/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery(document).trigger('gform_page_loaded', [3, current_page]);window['gf_submitting_3'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}jQuery('#gform_wrapper_3').replaceWith(confirmation_content);jQuery(document).scrollTop(jQuery('#gf_3').offset().top - mt);jQuery(document).trigger('gform_confirmation_loaded', [3]);window['gf_submitting_3'] = false;wp.a11y.speak(jQuery('#gform_confirmation_message_3').text());}else{jQuery('#gform_3').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger("gform_pre_post_render", [{ formId: "3", currentPage: "current_page", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_3" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_3";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_3" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 3, current_page );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );} );
+</script>
+                    </div>
+
+                                            <div class="valuation-modal__footer-note">For more information on how we use your data please refer to our <a href="/privacy-policy">privacy policy</a></div>
+                                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade valuation-modal" id="viewing-form-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="viewing-form-modal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="valuation-modal__container">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="exampleModalLabel">Request a viewing</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-container">
+                        
+                <div class='gf_browser_chrome gform_wrapper gravity-theme gform-theme--no-framework' data-form-theme='gravity-theme' data-form-index='0' id='gform_wrapper_4' ><div id='gf_4' class='gform_anchor' tabindex='-1'></div><form method='post' enctype='multipart/form-data' target='gform_ajax_frame_4' id='gform_4'  action='/property/?wppf_search=to-buy&#038;wppf_branch&#038;wppf_min_price&#038;wppf_soldlet=default&#038;wppf_orderby=price-desc&#038;wppf_view=grid&#038;wppf_lat&#038;wppf_lng&#038;wppf_radius=Text+Match+Only+%28no+radius%29&#038;wppf_records=12#gf_4' data-formid='4' novalidate>
+                        <div class='gform-body gform_body'><div id='gform_fields_4' class='gform_fields top_label form_sublabel_below description_below validation_below'><div id="field_4_1" class="gfield gfield--type-text gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_4_1'>Name<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></label><div class='ginput_container ginput_container_text'><input name='input_1' id='input_4_1' type='text' value='' class='large'     aria-required="true" aria-invalid="false"   /></div></div><div id="field_4_3" class="gfield gfield--type-email gfield--width-full gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_4_3'>Email<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></label><div class='ginput_container ginput_container_email'>
+                            <input name='input_3' id='input_4_3' type='email' value='' class='large'    aria-required="true" aria-invalid="false"  />
+                        </div></div><div id="field_4_2" class="gfield gfield--type-text gfield--width-full gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_4_2'>Telephone<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></label><div class='ginput_container ginput_container_text'><input name='input_2' id='input_4_2' type='text' value='' class='large'     aria-required="true" aria-invalid="false"   /></div></div><div id="field_4_4" class="gfield gfield--type-select gfield--width-full gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_4_4'>Best time to call<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></label><div class='ginput_container ginput_container_select'><select name='input_4' id='input_4_4' class='large gfield_select'    aria-required="true" aria-invalid="false" ><option value='Weekday (Morning)' >Weekday (Morning)</option><option value='Weekday (Afternoon)' >Weekday (Afternoon)</option><option value='Weekend (Morning)' >Weekend (Morning)</option><option value='Weekend (Afternoon)' >Weekend (Afternoon)</option></select></div></div><div id="field_4_5" class="gfield gfield--type-textarea gfield--width-full field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_4_5'>Further information?</label><div class='ginput_container ginput_container_textarea'><textarea name='input_5' id='input_4_5' class='textarea large'      aria-invalid="false"   rows='5' cols='50'></textarea></div></div><div id="field_4_6" class="gfield gfield--type-hidden gfield--width-full gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><div class='ginput_container ginput_container_text'><input name='input_6' id='input_4_6' type='hidden' class='gform_hidden'  aria-invalid="false" value='' /></div></div><div id="field_4_7" class="gfield gfield--type-honeypot gform_validation_container field_sublabel_below gfield--has-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_4_7'>Email</label><div class='ginput_container'><input name='input_7' id='input_4_7' type='text' value='' autocomplete='new-password'/></div><div class='gfield_description' id='gfield_description_4_7'>This field is for validation purposes and should be left unchanged.</div></div></div></div>
+        <div class='gform-footer gform_footer top_label'> <input type='submit' id='gform_submit_button_4' class='gform_button button' onclick='gform.submission.handleButtonClick(this);' data-submission-type='submit' value='Request a viewing'  /> <input type='hidden' name='gform_ajax' value='form_id=4&amp;title=&amp;description=&amp;tabindex=0&amp;theme=gravity-theme&amp;styles=[]&amp;hash=0625ad3108df0d2bac1119ab63bbcf2e' />
+            <input type='hidden' class='gform_hidden' name='gform_submission_method' data-js='gform_submission_method_4' value='iframe' />
+            <input type='hidden' class='gform_hidden' name='gform_theme' data-js='gform_theme_4' id='gform_theme_4' value='gravity-theme' />
+            <input type='hidden' class='gform_hidden' name='gform_style_settings' data-js='gform_style_settings_4' id='gform_style_settings_4' value='[]' />
+            <input type='hidden' class='gform_hidden' name='is_submit_4' value='1' />
+            <input type='hidden' class='gform_hidden' name='gform_submit' value='4' />
+            
+            <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+            <input type='hidden' class='gform_hidden' name='state_4' value='WyJbXSIsImZhZjBjMjNhMjMxZTkyZjBkODk2NWEwOTNkY2IyOGVkIl0=' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_target_page_number_4' id='gform_target_page_number_4' value='0' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_source_page_number_4' id='gform_source_page_number_4' value='1' />
+            <input type='hidden' name='gform_field_values' value='' />
+            
+        </div>
+                        </form>
+                        </div>
+		                <iframe style='display:none;width:0px;height:0px;' src='about:blank' name='gform_ajax_frame_4' id='gform_ajax_frame_4' title='This iframe contains the logic required to handle Ajax powered Gravity Forms.'></iframe>
+		                <script>
+gform.initializeOnLoaded( function() {gformInitSpinner( 4, 'https://homesureproperty.co.uk/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery('#gform_ajax_frame_4').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_4');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_4').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;var mt = parseInt(jQuery('html').css('margin-top'), 10) + parseInt(jQuery('body').css('margin-top'), 10) + 100;if(is_form){jQuery('#gform_wrapper_4').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_4').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_4').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */ jQuery(document).scrollTop(jQuery('#gform_wrapper_4').offset().top - mt); }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_4').val();gformInitSpinner( 4, 'https://homesureproperty.co.uk/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery(document).trigger('gform_page_loaded', [4, current_page]);window['gf_submitting_4'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}jQuery('#gform_wrapper_4').replaceWith(confirmation_content);jQuery(document).scrollTop(jQuery('#gf_4').offset().top - mt);jQuery(document).trigger('gform_confirmation_loaded', [4]);window['gf_submitting_4'] = false;wp.a11y.speak(jQuery('#gform_confirmation_message_4').text());}else{jQuery('#gform_4').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger("gform_pre_post_render", [{ formId: "4", currentPage: "current_page", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_4" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_4";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_4" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 4, current_page );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );} );
+</script>
+                    </div>
+
+                                            <div class="valuation-modal__footer-note">For more information on how we use your data please refer to our <a href="/privacy-policy">privacy policy</a></div>
+                                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade valuation-modal" id="viewing-favourites-form-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="viewing-favourites-form-modal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="valuation-modal__container">
+                <div class="modal-header">
+                    <h2 class="modal-title">Request viewings</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-container">
+                        
+                <div class='gf_browser_chrome gform_wrapper gravity-theme gform-theme--no-framework' data-form-theme='gravity-theme' data-form-index='0' id='gform_wrapper_6' ><div id='gf_6' class='gform_anchor' tabindex='-1'></div><form method='post' enctype='multipart/form-data' target='gform_ajax_frame_6' id='gform_6'  action='/property/?wppf_search=to-buy&#038;wppf_branch&#038;wppf_min_price&#038;wppf_soldlet=default&#038;wppf_orderby=price-desc&#038;wppf_view=grid&#038;wppf_lat&#038;wppf_lng&#038;wppf_radius=Text+Match+Only+%28no+radius%29&#038;wppf_records=12#gf_6' data-formid='6' novalidate>
+                        <div class='gform-body gform_body'><div id='gform_fields_6' class='gform_fields top_label form_sublabel_below description_below validation_below'><div id="field_6_1" class="gfield gfield--type-text gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_6_1'>Name<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></label><div class='ginput_container ginput_container_text'><input name='input_1' id='input_6_1' type='text' value='' class='large'     aria-required="true" aria-invalid="false"   /></div></div><div id="field_6_3" class="gfield gfield--type-email gfield--width-full gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_6_3'>Email<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></label><div class='ginput_container ginput_container_email'>
+                            <input name='input_3' id='input_6_3' type='email' value='' class='large'    aria-required="true" aria-invalid="false"  />
+                        </div></div><div id="field_6_2" class="gfield gfield--type-text gfield--width-full gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_6_2'>Telephone<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></label><div class='ginput_container ginput_container_text'><input name='input_2' id='input_6_2' type='text' value='' class='large'     aria-required="true" aria-invalid="false"   /></div></div><div id="field_6_4" class="gfield gfield--type-select gfield--width-full gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_6_4'>Best time to call<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></label><div class='ginput_container ginput_container_select'><select name='input_4' id='input_6_4' class='large gfield_select'    aria-required="true" aria-invalid="false" ><option value='Weekday (Morning)' >Weekday (Morning)</option><option value='Weekday (Afternoon)' >Weekday (Afternoon)</option><option value='Weekend (Morning)' >Weekend (Morning)</option><option value='Weekend (Afternoon)' >Weekend (Afternoon)</option></select></div></div><div id="field_6_5" class="gfield gfield--type-textarea gfield--width-full field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_6_5'>Further information?</label><div class='ginput_container ginput_container_textarea'><textarea name='input_5' id='input_6_5' class='textarea large'      aria-invalid="false"   rows='5' cols='50'></textarea></div></div><div id="field_6_7" class="gfield gfield--type-textarea gfield--width-full field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_hidden"  ><div class="admin-hidden-markup"><i class="gform-icon gform-icon--hidden" aria-hidden="true" title="This field is hidden when viewing the form"></i><span>This field is hidden when viewing the form</span></div><label class='gfield_label gform-field-label' for='input_6_7'>Favourites</label><div class='ginput_container ginput_container_textarea'><textarea name='input_7' id='input_6_7' class='textarea large'      aria-invalid="false"   rows='5' cols='50'></textarea></div></div><div id="field_6_8" class="gfield gfield--type-honeypot gform_validation_container field_sublabel_below gfield--has-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_6_8'>Phone</label><div class='ginput_container'><input name='input_8' id='input_6_8' type='text' value='' autocomplete='new-password'/></div><div class='gfield_description' id='gfield_description_6_8'>This field is for validation purposes and should be left unchanged.</div></div></div></div>
+        <div class='gform-footer gform_footer top_label'> <input type='submit' id='gform_submit_button_6' class='gform_button button' onclick='gform.submission.handleButtonClick(this);' data-submission-type='submit' value='Request viewings'  /> <input type='hidden' name='gform_ajax' value='form_id=6&amp;title=&amp;description=&amp;tabindex=0&amp;theme=gravity-theme&amp;styles=[]&amp;hash=6dc9ca4c384b2e57e9b2535f3c5b00bf' />
+            <input type='hidden' class='gform_hidden' name='gform_submission_method' data-js='gform_submission_method_6' value='iframe' />
+            <input type='hidden' class='gform_hidden' name='gform_theme' data-js='gform_theme_6' id='gform_theme_6' value='gravity-theme' />
+            <input type='hidden' class='gform_hidden' name='gform_style_settings' data-js='gform_style_settings_6' id='gform_style_settings_6' value='[]' />
+            <input type='hidden' class='gform_hidden' name='is_submit_6' value='1' />
+            <input type='hidden' class='gform_hidden' name='gform_submit' value='6' />
+            
+            <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+            <input type='hidden' class='gform_hidden' name='state_6' value='WyJbXSIsImZhZjBjMjNhMjMxZTkyZjBkODk2NWEwOTNkY2IyOGVkIl0=' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_target_page_number_6' id='gform_target_page_number_6' value='0' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_source_page_number_6' id='gform_source_page_number_6' value='1' />
+            <input type='hidden' name='gform_field_values' value='' />
+            
+        </div>
+                        </form>
+                        </div>
+		                <iframe style='display:none;width:0px;height:0px;' src='about:blank' name='gform_ajax_frame_6' id='gform_ajax_frame_6' title='This iframe contains the logic required to handle Ajax powered Gravity Forms.'></iframe>
+		                <script>
+gform.initializeOnLoaded( function() {gformInitSpinner( 6, 'https://homesureproperty.co.uk/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery('#gform_ajax_frame_6').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_6');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_6').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;var mt = parseInt(jQuery('html').css('margin-top'), 10) + parseInt(jQuery('body').css('margin-top'), 10) + 100;if(is_form){jQuery('#gform_wrapper_6').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_6').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_6').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */ jQuery(document).scrollTop(jQuery('#gform_wrapper_6').offset().top - mt); }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_6').val();gformInitSpinner( 6, 'https://homesureproperty.co.uk/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery(document).trigger('gform_page_loaded', [6, current_page]);window['gf_submitting_6'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}jQuery('#gform_wrapper_6').replaceWith(confirmation_content);jQuery(document).scrollTop(jQuery('#gf_6').offset().top - mt);jQuery(document).trigger('gform_confirmation_loaded', [6]);window['gf_submitting_6'] = false;wp.a11y.speak(jQuery('#gform_confirmation_message_6').text());}else{jQuery('#gform_6').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger("gform_pre_post_render", [{ formId: "6", currentPage: "current_page", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_6" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_6";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_6" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 6, current_page );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );} );
+</script>
+                    </div>
+
+                                            <div class="valuation-modal__footer-note">For more information on how we use your data please refer to our <a href="/privacy-policy">privacy policy</a></div>
+                                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade valuation-modal" id="callback-form-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="callback-form-modal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="valuation-modal__container">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="exampleModalLabel">Call me back</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-container">
+                        
+                <div class='gf_browser_chrome gform_wrapper gravity-theme gform-theme--no-framework' data-form-theme='gravity-theme' data-form-index='0' id='gform_wrapper_5' ><div id='gf_5' class='gform_anchor' tabindex='-1'></div><form method='post' enctype='multipart/form-data' target='gform_ajax_frame_5' id='gform_5'  action='/property/?wppf_search=to-buy&#038;wppf_branch&#038;wppf_min_price&#038;wppf_soldlet=default&#038;wppf_orderby=price-desc&#038;wppf_view=grid&#038;wppf_lat&#038;wppf_lng&#038;wppf_radius=Text+Match+Only+%28no+radius%29&#038;wppf_records=12#gf_5' data-formid='5' novalidate>
+                        <div class='gform-body gform_body'><div id='gform_fields_5' class='gform_fields top_label form_sublabel_below description_below validation_below'><div id="field_5_1" class="gfield gfield--type-text gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_5_1'>Name<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></label><div class='ginput_container ginput_container_text'><input name='input_1' id='input_5_1' type='text' value='' class='large'     aria-required="true" aria-invalid="false"   /></div></div><div id="field_5_3" class="gfield gfield--type-email gfield--width-full gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_5_3'>Email<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></label><div class='ginput_container ginput_container_email'>
+                            <input name='input_3' id='input_5_3' type='email' value='' class='large'    aria-required="true" aria-invalid="false"  />
+                        </div></div><div id="field_5_2" class="gfield gfield--type-text gfield--width-full gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_5_2'>Telephone<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></label><div class='ginput_container ginput_container_text'><input name='input_2' id='input_5_2' type='text' value='' class='large'     aria-required="true" aria-invalid="false"   /></div></div><div id="field_5_4" class="gfield gfield--type-select gfield--width-full gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_5_4'>Best time to call<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></label><div class='ginput_container ginput_container_select'><select name='input_4' id='input_5_4' class='large gfield_select'    aria-required="true" aria-invalid="false" ><option value='Weekday (Morning)' >Weekday (Morning)</option><option value='Weekday (Afternoon)' >Weekday (Afternoon)</option><option value='Weekend (Morning)' >Weekend (Morning)</option><option value='Weekend (Afternoon)' >Weekend (Afternoon)</option></select></div></div><div id="field_5_7" class="gfield gfield--type-textarea gfield--width-full field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_5_7'>Further information?</label><div class='ginput_container ginput_container_textarea'><textarea name='input_7' id='input_5_7' class='textarea large'      aria-invalid="false"   rows='5' cols='50'></textarea></div></div><div id="field_5_6" class="gfield gfield--type-hidden gfield--width-full gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><div class='ginput_container ginput_container_text'><input name='input_6' id='input_5_6' type='hidden' class='gform_hidden'  aria-invalid="false" value='' /></div></div><div id="field_5_8" class="gfield gfield--type-honeypot gform_validation_container field_sublabel_below gfield--has-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_5_8'>Email</label><div class='ginput_container'><input name='input_8' id='input_5_8' type='text' value='' autocomplete='new-password'/></div><div class='gfield_description' id='gfield_description_5_8'>This field is for validation purposes and should be left unchanged.</div></div></div></div>
+        <div class='gform-footer gform_footer top_label'> <input type='submit' id='gform_submit_button_5' class='gform_button button' onclick='gform.submission.handleButtonClick(this);' data-submission-type='submit' value='Request a call back'  /> <input type='hidden' name='gform_ajax' value='form_id=5&amp;title=&amp;description=&amp;tabindex=0&amp;theme=gravity-theme&amp;styles=[]&amp;hash=96b409ceaabf0bb701ef351f05150682' />
+            <input type='hidden' class='gform_hidden' name='gform_submission_method' data-js='gform_submission_method_5' value='iframe' />
+            <input type='hidden' class='gform_hidden' name='gform_theme' data-js='gform_theme_5' id='gform_theme_5' value='gravity-theme' />
+            <input type='hidden' class='gform_hidden' name='gform_style_settings' data-js='gform_style_settings_5' id='gform_style_settings_5' value='[]' />
+            <input type='hidden' class='gform_hidden' name='is_submit_5' value='1' />
+            <input type='hidden' class='gform_hidden' name='gform_submit' value='5' />
+            
+            <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+            <input type='hidden' class='gform_hidden' name='state_5' value='WyJbXSIsImZhZjBjMjNhMjMxZTkyZjBkODk2NWEwOTNkY2IyOGVkIl0=' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_target_page_number_5' id='gform_target_page_number_5' value='0' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_source_page_number_5' id='gform_source_page_number_5' value='1' />
+            <input type='hidden' name='gform_field_values' value='' />
+            
+        </div>
+                        </form>
+                        </div>
+		                <iframe style='display:none;width:0px;height:0px;' src='about:blank' name='gform_ajax_frame_5' id='gform_ajax_frame_5' title='This iframe contains the logic required to handle Ajax powered Gravity Forms.'></iframe>
+		                <script>
+gform.initializeOnLoaded( function() {gformInitSpinner( 5, 'https://homesureproperty.co.uk/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery('#gform_ajax_frame_5').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_5');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_5').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;var mt = parseInt(jQuery('html').css('margin-top'), 10) + parseInt(jQuery('body').css('margin-top'), 10) + 100;if(is_form){jQuery('#gform_wrapper_5').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_5').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_5').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */ jQuery(document).scrollTop(jQuery('#gform_wrapper_5').offset().top - mt); }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_5').val();gformInitSpinner( 5, 'https://homesureproperty.co.uk/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery(document).trigger('gform_page_loaded', [5, current_page]);window['gf_submitting_5'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}jQuery('#gform_wrapper_5').replaceWith(confirmation_content);jQuery(document).scrollTop(jQuery('#gf_5').offset().top - mt);jQuery(document).trigger('gform_confirmation_loaded', [5]);window['gf_submitting_5'] = false;wp.a11y.speak(jQuery('#gform_confirmation_message_5').text());}else{jQuery('#gform_5').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger("gform_pre_post_render", [{ formId: "5", currentPage: "current_page", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_5" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_5";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_5" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 5, current_page );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );} );
+</script>
+                    </div>
+
+                                            <div class="valuation-modal__footer-note">For more information on how we use your data please refer to our <a href="/privacy-policy">privacy policy</a></div>
+                                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/homesure\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+		<script>
+		(function( w ){
+	"use strict";
+	// rel=preload support test
+	if( !w.loadCSS ){
+		w.loadCSS = function(){};
+	}
+	// define on the loadCSS obj
+	var rp = loadCSS.relpreload = {};
+	// rel=preload feature support test
+	// runs once and returns a function for compat purposes
+	rp.support = (function(){
+		var ret;
+		try {
+			ret = w.document.createElement( "link" ).relList.supports( "preload" );
+		} catch (e) {
+			ret = false;
+		}
+		return function(){
+			return ret;
+		};
+	})();
+
+	// if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+	// then change that media back to its intended value on load
+	rp.bindMediaToggle = function( link ){
+		// remember existing media attr for ultimate state, or default to 'all'
+		var finalMedia = link.media || "all";
+
+		function enableStylesheet(){
+			// unbind listeners
+			if( link.addEventListener ){
+				link.removeEventListener( "load", enableStylesheet );
+			} else if( link.attachEvent ){
+				link.detachEvent( "onload", enableStylesheet );
+			}
+			link.setAttribute( "onload", null ); 
+			link.media = finalMedia;
+		}
+
+		// bind load handlers to enable media
+		if( link.addEventListener ){
+			link.addEventListener( "load", enableStylesheet );
+		} else if( link.attachEvent ){
+			link.attachEvent( "onload", enableStylesheet );
+		}
+
+		// Set rel and non-applicable media type to start an async request
+		// note: timeout allows this to happen async to let rendering continue in IE
+		setTimeout(function(){
+			link.rel = "stylesheet";
+			link.media = "only x";
+		});
+		// also enable media after 3 seconds,
+		// which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+		setTimeout( enableStylesheet, 3000 );
+	};
+
+	// loop through link elements in DOM
+	rp.poly = function(){
+		// double check this to prevent external calls from running
+		if( rp.support() ){
+			return;
+		}
+		var links = w.document.getElementsByTagName( "link" );
+		for( var i = 0; i < links.length; i++ ){
+			var link = links[ i ];
+			// qualify links to those with rel=preload and as=style attrs
+			if( link.rel === "preload" && link.getAttribute( "as" ) === "style" && !link.getAttribute( "data-loadcss" ) ){
+				// prevent rerunning on link
+				link.setAttribute( "data-loadcss", true );
+				// bind listeners to toggle media back
+				rp.bindMediaToggle( link );
+			}
+		}
+	};
+
+	// if unsupported, run the polyfill
+	if( !rp.support() ){
+		// run once at least
+		rp.poly();
+
+		// rerun poly on an interval until onload
+		var run = w.setInterval( rp.poly, 500 );
+		if( w.addEventListener ){
+			w.addEventListener( "load", function(){
+				rp.poly();
+				w.clearInterval( run );
+			} );
+		} else if( w.attachEvent ){
+			w.attachEvent( "onload", function(){
+				rp.poly();
+				w.clearInterval( run );
+			} );
+		}
+	}
+
+
+	// commonjs
+	if( typeof exports !== "undefined" ){
+		exports.loadCSS = loadCSS;
+	}
+	else {
+		w.loadCSS = loadCSS;
+	}
+}( typeof global !== "undefined" ? global : this ) );
+		</script>
+		<script id="understrap-scripts-js-extra">
+var wishlistAjax = {"ajaxurl":"https:\/\/homesureproperty.co.uk\/wp-admin\/admin-ajax.php"};
+</script>
+<script src="https://homesureproperty.co.uk/wp-content/themes/homesure/js/theme.min.js?ver=1.1.0.1648159024" id="understrap-scripts-js"></script>
+<script src="https://homesureproperty.co.uk/wp-includes/js/dist/dom-ready.min.js?ver=f77871ff7694fffea381" id="wp-dom-ready-js"></script>
+<script src="https://homesureproperty.co.uk/wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6" id="wp-hooks-js"></script>
+<script src="https://homesureproperty.co.uk/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script id="wp-a11y-js-translations">
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "default", {"translation-revision-date":"2025-04-06 12:37:11+0000","generator":"GlotPress\/4.0.1","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n != 1;","lang":"en_GB"},"Notifications":["Notifications"]}},"comment":{"reference":"wp-includes\/js\/dist\/a11y.js"}} );
+</script>
+<script src="https://homesureproperty.co.uk/wp-includes/js/dist/a11y.min.js?ver=3156534cc54473497e14" id="wp-a11y-js"></script>
+<script defer='defer' src="https://homesureproperty.co.uk/wp-content/plugins/gravityforms/js/jquery.json.min.js?ver=2.9.13" id="gform_json-js"></script>
+<script id="gform_gravityforms-js-extra">
+var gform_i18n = {"datepicker":{"days":{"monday":"Mo","tuesday":"Tu","wednesday":"We","thursday":"Th","friday":"Fr","saturday":"Sa","sunday":"Su"},"months":{"january":"January","february":"February","march":"March","april":"April","may":"May","june":"June","july":"July","august":"August","september":"September","october":"October","november":"November","december":"December"},"firstDay":1,"iconText":"Select date"}};
+var gf_legacy_multi = [];
+var gform_gravityforms = {"strings":{"invalid_file_extension":"This type of file is not allowed. Must be one of the following:","delete_file":"Delete this file","in_progress":"in progress","file_exceeds_limit":"File exceeds size limit","illegal_extension":"This type of file is not allowed.","max_reached":"Maximum number of files reached","unknown_error":"There was a problem while saving the file on the server","currently_uploading":"Please wait for the uploading to complete","cancel":"Cancel","cancel_upload":"Cancel this upload","cancelled":"Cancelled"},"vars":{"images_url":"https:\/\/homesureproperty.co.uk\/wp-content\/plugins\/gravityforms\/images"}};
+var gf_global = {"gf_currency_config":{"name":"Pound Sterling","symbol_left":"&#163;","symbol_right":"","symbol_padding":" ","thousand_separator":",","decimal_separator":".","decimals":2,"code":"GBP"},"base_url":"https:\/\/homesureproperty.co.uk\/wp-content\/plugins\/gravityforms","number_formats":[],"spinnerUrl":"https:\/\/homesureproperty.co.uk\/wp-content\/plugins\/gravityforms\/images\/spinner.svg","version_hash":"bcf60626bd31ac58d07b2e6523c371b6","strings":{"newRowAdded":"New row added.","rowRemoved":"Row removed","formSaved":"The form has been saved.  The content contains the link to return and complete the form."}};
+var gf_global = {"gf_currency_config":{"name":"Pound Sterling","symbol_left":"&#163;","symbol_right":"","symbol_padding":" ","thousand_separator":",","decimal_separator":".","decimals":2,"code":"GBP"},"base_url":"https:\/\/homesureproperty.co.uk\/wp-content\/plugins\/gravityforms","number_formats":[],"spinnerUrl":"https:\/\/homesureproperty.co.uk\/wp-content\/plugins\/gravityforms\/images\/spinner.svg","version_hash":"bcf60626bd31ac58d07b2e6523c371b6","strings":{"newRowAdded":"New row added.","rowRemoved":"Row removed","formSaved":"The form has been saved.  The content contains the link to return and complete the form."}};
+var gf_global = {"gf_currency_config":{"name":"Pound Sterling","symbol_left":"&#163;","symbol_right":"","symbol_padding":" ","thousand_separator":",","decimal_separator":".","decimals":2,"code":"GBP"},"base_url":"https:\/\/homesureproperty.co.uk\/wp-content\/plugins\/gravityforms","number_formats":[],"spinnerUrl":"https:\/\/homesureproperty.co.uk\/wp-content\/plugins\/gravityforms\/images\/spinner.svg","version_hash":"bcf60626bd31ac58d07b2e6523c371b6","strings":{"newRowAdded":"New row added.","rowRemoved":"Row removed","formSaved":"The form has been saved.  The content contains the link to return and complete the form."}};
+var gf_global = {"gf_currency_config":{"name":"Pound Sterling","symbol_left":"&#163;","symbol_right":"","symbol_padding":" ","thousand_separator":",","decimal_separator":".","decimals":2,"code":"GBP"},"base_url":"https:\/\/homesureproperty.co.uk\/wp-content\/plugins\/gravityforms","number_formats":[],"spinnerUrl":"https:\/\/homesureproperty.co.uk\/wp-content\/plugins\/gravityforms\/images\/spinner.svg","version_hash":"bcf60626bd31ac58d07b2e6523c371b6","strings":{"newRowAdded":"New row added.","rowRemoved":"Row removed","formSaved":"The form has been saved.  The content contains the link to return and complete the form."}};
+</script>
+<script defer='defer' src="https://homesureproperty.co.uk/wp-content/plugins/gravityforms/js/gravityforms.min.js?ver=2.9.13" id="gform_gravityforms-js"></script>
+<script defer='defer' src="https://homesureproperty.co.uk/wp-content/plugins/gravityforms/assets/js/dist/utils.min.js?ver=380b7a5ec0757c78876bc8a59488f2f3" id="gform_gravityforms_utils-js"></script>
+<script defer='defer' src="https://homesureproperty.co.uk/wp-content/plugins/gravityforms/assets/js/dist/vendor-theme.min.js?ver=21e5a4db1670166692ac5745329bfc80" id="gform_gravityforms_theme_vendors-js"></script>
+<script id="gform_gravityforms_theme-js-extra">
+var gform_theme_config = {"common":{"form":{"honeypot":{"version_hash":"bcf60626bd31ac58d07b2e6523c371b6"},"ajax":{"ajaxurl":"https:\/\/homesureproperty.co.uk\/wp-admin\/admin-ajax.php","ajax_submission_nonce":"dc6fa7a904","i18n":{"step_announcement":"Step %1$s of %2$s, %3$s","unknown_error":"There was an unknown error processing your request. Please try again."}}}},"hmr_dev":"","public_path":"https:\/\/homesureproperty.co.uk\/wp-content\/plugins\/gravityforms\/assets\/js\/dist\/","config_nonce":"f9dddd1df7"};
+</script>
+<script defer='defer' src="https://homesureproperty.co.uk/wp-content/plugins/gravityforms/assets/js/dist/scripts-theme.min.js?ver=b436459e6f25ebcd9e95ea18e1a35e19" id="gform_gravityforms_theme-js"></script>
+<script>
+gform.initializeOnLoaded( function() { jQuery(document).on('gform_post_render', function(event, formId, currentPage){if(formId == 3) {} } );jQuery(document).on('gform_post_conditional_logic', function(event, formId, fields, isInit){} ) } );
+</script>
+<script>
+gform.initializeOnLoaded( function() {jQuery(document).trigger("gform_pre_post_render", [{ formId: "3", currentPage: "1", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_3" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_3";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_3" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 3, 1 );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );
+</script>
+<script>
+gform.initializeOnLoaded( function() { jQuery(document).on('gform_post_render', function(event, formId, currentPage){if(formId == 4) {} } );jQuery(document).on('gform_post_conditional_logic', function(event, formId, fields, isInit){} ) } );
+</script>
+<script>
+gform.initializeOnLoaded( function() {jQuery(document).trigger("gform_pre_post_render", [{ formId: "4", currentPage: "1", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_4" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_4";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_4" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 4, 1 );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );
+</script>
+<script>
+gform.initializeOnLoaded( function() { jQuery(document).on('gform_post_render', function(event, formId, currentPage){if(formId == 6) {} } );jQuery(document).on('gform_post_conditional_logic', function(event, formId, fields, isInit){} ) } );
+</script>
+<script>
+gform.initializeOnLoaded( function() {jQuery(document).trigger("gform_pre_post_render", [{ formId: "6", currentPage: "1", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_6" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_6";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_6" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 6, 1 );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );
+</script>
+<script>
+gform.initializeOnLoaded( function() { jQuery(document).on('gform_post_render', function(event, formId, currentPage){if(formId == 5) {} } );jQuery(document).on('gform_post_conditional_logic', function(event, formId, fields, isInit){} ) } );
+</script>
+<script>
+gform.initializeOnLoaded( function() {jQuery(document).trigger("gform_pre_post_render", [{ formId: "5", currentPage: "1", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_5" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_5";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_5" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 5, 1 );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );
+</script>
+
+
+</body>
+
+</html>
